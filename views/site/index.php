@@ -10,14 +10,18 @@
         <div class="banner_box">
           <div class="slider-wrapper banner">
             <!--Place your banner images-->
-            <div id="slider" class="banner_slider"> <a href="#"><img src="images/banner_1.jpg" alt="" /></a> <a href="#"><img src="images/banner_2.jpg" alt="" /></a> <a href="#"><img src="images/banner_3.jpg" alt="" /></a> <a href="#"><img
-                  src="images/banner_4.jpg" alt="" /></a> </div>
+            <div id="slider" class="banner_slider">
+              <a href="#"><img src="/template/images/banner_1.jpg" alt="" /></a>
+              <a href="#"><img src="/template/images/banner_2.jpg" alt="" /></a>
+              <a href="#"><img src="/template/images/banner_3.jpg" alt="" /></a>
+              <a href="#"><img src="/template/images/banner_4.jpg" alt="" /></a> 
+            </div>
           </div>
           <div class="promotional_block">
             <!--Place your promotional images-->
-            <div class="block_one"> <a href="#"><img src="images/promo1.jpg" alt="" /></a> </div>
-            <div class="block_one"> <a href="#"><img src="images/promo2.jpg" alt="" /></a> </div>
-            <div class="block_two"> <a href="#"><img src="images/promo3.jpg" alt="" /></a> </div>
+            <div class="block_one"> <a href="#"><img src="/template/images/promo1.jpg" alt="" /></a> </div>
+            <div class="block_one"> <a href="#"><img src="/template/images/promo2.jpg" alt="" /></a> </div>
+            <div class="block_two"> <a href="#"><img src="/template/images/promo3.jpg" alt="" /></a> </div>
           </div>
         </div>
         <!--End Banner-->
@@ -31,7 +35,7 @@
               <div id="container" class="mix_wrapper">
                 <ul style="position: relative;" class="mix_gallery">
                   <li class="item mix_row">
-                    <div class="outer box"> <a href="#" class="product-image"><img src="images/pro1.jpg" alt="Imperdiet id tincidunt " /></a>
+                    <div class="outer box"> <a href="#" class="product-image"><img src="/template/images/pro1.jpg" alt="Imperdiet id tincidunt " /></a>
                       <div class="ic_caption">
                         <h2 class="product-name"><a href="#" title="Imperdiet id tincidunt ">Imperdiet id tincidunt </a></h2>
                         <div class="actions">
@@ -43,7 +47,7 @@
                     </div>
                   </li>
                   <li class="item mix_row">
-                    <div class="outer box"> <a href="#" class="product-image"><img src="images/pro2.jpg" alt="Imperdiet id tincidunt " /></a>
+                    <div class="outer box"> <a href="#" class="product-image"><img src="/template/images/pro2.jpg" alt="Imperdiet id tincidunt " /></a>
                       <div class="ic_caption">
                         <h2 class="product-name"><a href="#" title="Imperdiet id tincidunt ">Imperdiet id tincidunt </a></h2>
                         <div class="actions">
@@ -55,7 +59,7 @@
                     </div>
                   </li>
                   <li class="item mix_row">
-                    <div class="outer box"> <a href="#" class="product-image"><img src="images/pro3.jpg" alt="Imperdiet id tincidunt " /></a>
+                    <div class="outer box"> <a href="#" class="product-image"><img src="/template/images/pro3.jpg" alt="Imperdiet id tincidunt " /></a>
                       <div class="ic_caption">
                         <h2 class="product-name"><a href="#" title="Imperdiet id tincidunt ">Imperdiet id tincidunt </a></h2>
                         <div class="actions">
@@ -67,7 +71,7 @@
                     </div>
                   </li>
                   <li class="item mix_row">
-                    <div class="outer box"> <a href="#" class="product-image"><img src="images/pro4.jpg" alt="Imperdiet id tincidunt " /></a>
+                    <div class="outer box"> <a href="#" class="product-image"><img src="/template/images/pro4.jpg" alt="Imperdiet id tincidunt " /></a>
                       <div class="ic_caption">
                         <h2 class="product-name"><a href="#" title="Imperdiet id tincidunt ">Imperdiet id tincidunt </a></h2>
                         <div class="actions">
@@ -79,7 +83,7 @@
                     </div>
                   </li>
                   <li class="item mix_row last">
-                    <div class="outer box"> <a href="#" class="product-image"><img src="images/pro5.jpg" alt="Imperdiet id tincidunt" /></a>
+                    <div class="outer box"> <a href="#" class="product-image"><img src="/template/images/pro5.jpg" alt="Imperdiet id tincidunt" /></a>
                       <div class="ic_caption">
                         <h2 class="product-name"><a href="#" title="Imperdiet id tincidunt ">Imperdiet id tincidunt </a></h2>
                         <div class="actions">
@@ -91,7 +95,7 @@
                     </div>
                   </li>
                   <li class="item mix_row">
-                    <div class="outer box"> <a href="#" class="product-image"><img src="images/pro6.jpg" alt="Imperdiet id tincidunt" /></a>
+                    <div class="outer box"> <a href="#" class="product-image"><img src="/template/images/pro6.jpg" alt="Imperdiet id tincidunt" /></a>
                       <div class="ic_caption">
                         <h2 class="product-name"><a href="#" title="Imperdiet id tincidunt ">Imperdiet id tincidunt </a></h2>
                         <div class="actions">
@@ -103,7 +107,7 @@
                     </div>
                   </li>
                   <li class="item mix_row">
-                    <div class="outer box"> <a href="#" class="product-image"><img src="images/pro7.jpg" alt="Imperdiet id tincidunt" /></a>
+                    <div class="outer box"> <a href="#" class="product-image"><img src="/template/images/pro7.jpg" alt="Imperdiet id tincidunt" /></a>
                       <div class="ic_caption">
                         <h2 class="product-name"><a href="#" title="Imperdiet id tincidunt ">Imperdiet id tincidunt </a></h2>
                         <div class="actions">
@@ -115,7 +119,7 @@
                     </div>
                   </li>
                   <li class="item mix_row">
-                    <div class="outer box"> <a href="#" class="product-image"><img src="images/pro8.jpg" alt="Imperdiet id tincidunt" /></a>
+                    <div class="outer box"> <a href="#" class="product-image"><img src="/template/images/pro8.jpg" alt="Imperdiet id tincidunt" /></a>
                       <div class="ic_caption">
                         <h2 class="product-name"><a href="#" title="Imperdiet id tincidunt ">Imperdiet id tincidunt </a></h2>
                         <div class="actions">
@@ -127,7 +131,7 @@
                     </div>
                   </li>
                   <li class="item mix_row">
-                    <div class="outer box"> <a href="#" class="product-image"><img src="images/pro9.jpg" alt="Imperdiet id tincidunt" /></a>
+                    <div class="outer box"> <a href="#" class="product-image"><img src="/template/images/pro9.jpg" alt="Imperdiet id tincidunt" /></a>
                       <div class="ic_caption">
                         <h2 class="product-name"><a href="#" title="Imperdiet id tincidunt ">Imperdiet id tincidunt </a></h2>
                         <div class="actions">
@@ -139,7 +143,7 @@
                     </div>
                   </li>
                   <li class="item mix_row last">
-                    <div class="outer box"> <a href="#" class="product-image"><img src="images/pro10.jpg" alt="Imperdiet id tincidunt" /></a>
+                    <div class="outer box"> <a href="#" class="product-image"><img src="/template/images/pro10.jpg" alt="Imperdiet id tincidunt" /></a>
                       <div class="ic_caption">
                         <h2 class="product-name"><a href="#" title="Imperdiet id tincidunt ">Imperdiet id tincidunt </a></h2>
                         <div class="actions">
@@ -151,7 +155,7 @@
                     </div>
                   </li>
                   <li class="item mix_row">
-                    <div class="outer box"> <a href="#" class="product-image"><img src="images/pro11.jpg" alt="Imperdiet id tincidunt" /></a>
+                    <div class="outer box"> <a href="#" class="product-image"><img src="/template/images/pro11.jpg" alt="Imperdiet id tincidunt" /></a>
                       <div class="ic_caption">
                         <h2 class="product-name"><a href="#" title="Imperdiet id tincidunt ">Imperdiet id tincidunt </a></h2>
                         <div class="actions">
@@ -163,7 +167,7 @@
                     </div>
                   </li>
                   <li class="item mix_row">
-                    <div class="outer box"> <a href="#" class="product-image"><img src="images/pro12.jpg" alt="Imperdiet id tincidunt" /></a>
+                    <div class="outer box"> <a href="#" class="product-image"><img src="/template/images/pro12.jpg" alt="Imperdiet id tincidunt" /></a>
                       <div class="ic_caption">
                         <h2 class="product-name"><a href="#" title="Imperdiet id tincidunt ">Imperdiet id tincidunt </a></h2>
                         <div class="actions">
@@ -175,7 +179,7 @@
                     </div>
                   </li>
                   <li class="item mix_row">
-                    <div class="outer box"> <a href="#" class="product-image"><img src="images/pro13.jpg" alt="Imperdiet id tincidunt" /></a>
+                    <div class="outer box"> <a href="#" class="product-image"><img src="/template/images/pro13.jpg" alt="Imperdiet id tincidunt" /></a>
                       <div class="ic_caption">
                         <h2 class="product-name"><a href="#" title="Imperdiet id tincidunt ">Imperdiet id tincidunt </a></h2>
                         <div class="actions">
@@ -187,7 +191,7 @@
                     </div>
                   </li>
                   <li class="item mix_row">
-                    <div class="outer box"> <a href="#" class="product-image"><img src="images/pro14.jpg" alt="Imperdiet id tincidunt" /></a>
+                    <div class="outer box"> <a href="#" class="product-image"><img src="/template/images/pro14.jpg" alt="Imperdiet id tincidunt" /></a>
                       <div class="ic_caption">
                         <h2 class="product-name"><a href="#" title="Imperdiet id tincidunt ">Imperdiet id tincidunt </a></h2>
                         <div class="actions">
@@ -199,7 +203,7 @@
                     </div>
                   </li>
                   <li class="item mix_row last">
-                    <div class="outer box"> <a href="#" class="product-image"><img src="images/pro15.jpg" alt="Imperdiet id tincidunt" /></a>
+                    <div class="outer box"> <a href="#" class="product-image"><img src="/template/images/pro15.jpg" alt="Imperdiet id tincidunt" /></a>
                       <div class="ic_caption">
                         <h2 class="product-name"><a href="#" title="Imperdiet id tincidunt ">Imperdiet id tincidunt </a></h2>
                         <div class="actions">
@@ -211,7 +215,7 @@
                     </div>
                   </li>
                   <li class="item mix_row">
-                    <div class="outer box"> <a href="#" class="product-image"><img src="images/pro16.jpg" alt="Imperdiet id tincidunt" /></a>
+                    <div class="outer box"> <a href="#" class="product-image"><img src="/template/images/pro16.jpg" alt="Imperdiet id tincidunt" /></a>
                       <div class="ic_caption">
                         <h2 class="product-name"><a href="#" title="Imperdiet id tincidunt ">Imperdiet id tincidunt </a></h2>
                         <div class="actions">
@@ -223,7 +227,7 @@
                     </div>
                   </li>
                   <li class="item mix_row">
-                    <div class="outer box"> <a href="#" class="product-image"><img src="images/pro17.jpg" alt="Imperdiet id tincidunt" /></a>
+                    <div class="outer box"> <a href="#" class="product-image"><img src="/template/images/pro17.jpg" alt="Imperdiet id tincidunt" /></a>
                       <div class="ic_caption">
                         <h2 class="product-name"><a href="#" title="Imperdiet id tincidunt ">Imperdiet id tincidunt </a></h2>
                         <div class="actions">
@@ -235,7 +239,7 @@
                     </div>
                   </li>
                   <li class="item mix_row">
-                    <div class="outer box"> <a href="#" class="product-image"><img src="images/pro18.jpg" alt="Imperdiet id tincidunt" /></a>
+                    <div class="outer box"> <a href="#" class="product-image"><img src="/template/images/pro18.jpg" alt="Imperdiet id tincidunt" /></a>
                       <div class="ic_caption">
                         <h2 class="product-name"><a href="#" title="Imperdiet id tincidunt ">Imperdiet id tincidunt </a></h2>
                         <div class="actions">
@@ -247,7 +251,7 @@
                     </div>
                   </li>
                   <li class="item mix_row">
-                    <div class="outer box"> <a href="#" class="product-image"><img src="images/pro19.jpg" alt="Imperdiet id tincidunt" /></a>
+                    <div class="outer box"> <a href="#" class="product-image"><img src="/template/images/pro19.jpg" alt="Imperdiet id tincidunt" /></a>
                       <div class="ic_caption">
                         <h2 class="product-name"><a href="#" title="Imperdiet id tincidunt ">Imperdiet id tincidunt </a></h2>
                         <div class="actions">
@@ -259,7 +263,7 @@
                     </div>
                   </li>
                   <li class="item mix_row last">
-                    <div class="outer box"> <a href="#" class="product-image"><img src="images/pro20.jpg" alt="Imperdiet id tincidunt" /></a>
+                    <div class="outer box"> <a href="#" class="product-image"><img src="/template/images/pro20.jpg" alt="Imperdiet id tincidunt" /></a>
                       <div class="ic_caption">
                         <h2 class="product-name"><a href="#" title="Imperdiet id tincidunt ">Imperdiet id tincidunt </a></h2>
                         <div class="actions">
@@ -271,7 +275,7 @@
                     </div>
                   </li>
                   <li class="item mix_row">
-                    <div class="outer box"> <a href="#" class="product-image"><img src="images/pro21.jpg" alt="Imperdiet id tincidunt" /></a>
+                    <div class="outer box"> <a href="#" class="product-image"><img src="/template/images/pro21.jpg" alt="Imperdiet id tincidunt" /></a>
                       <div class="ic_caption">
                         <h2 class="product-name"><a href="#" title="Imperdiet id tincidunt ">Imperdiet id tincidunt </a></h2>
                         <div class="actions">
@@ -283,7 +287,7 @@
                     </div>
                   </li>
                   <li class="item mix_row">
-                    <div class="outer box"> <a href="#" class="product-image"><img src="images/pro22.jpg" alt="Imperdiet id tincidunt" /></a>
+                    <div class="outer box"> <a href="#" class="product-image"><img src="/template/images/pro22.jpg" alt="Imperdiet id tincidunt" /></a>
                       <div class="ic_caption">
                         <h2 class="product-name"><a href="#" title="Imperdiet id tincidunt ">Imperdiet id tincidunt </a></h2>
                         <div class="actions">
@@ -295,7 +299,7 @@
                     </div>
                   </li>
                   <li class="item mix_row">
-                    <div class="outer box"> <a href="#" class="product-image"><img src="images/pro23.jpg" alt="Imperdiet id tincidunt" /></a>
+                    <div class="outer box"> <a href="#" class="product-image"><img src="/template/images/pro23.jpg" alt="Imperdiet id tincidunt" /></a>
                       <div class="ic_caption">
                         <h2 class="product-name"><a href="#" title="Imperdiet id tincidunt ">Imperdiet id tincidunt </a></h2>
                         <div class="actions">
@@ -307,7 +311,7 @@
                     </div>
                   </li>
                   <li class="item mix_row">
-                    <div class="outer box"> <a href="#" class="product-image"><img src="images/pro24.jpg" alt="Imperdiet id tincidunt" /></a>
+                    <div class="outer box"> <a href="#" class="product-image"><img src="/template/images/pro24.jpg" alt="Imperdiet id tincidunt" /></a>
                       <div class="ic_caption">
                         <h2 class="product-name"><a href="#" title="Imperdiet id tincidunt ">Imperdiet id tincidunt </a></h2>
                         <div class="actions">
@@ -319,7 +323,7 @@
                     </div>
                   </li>
                   <li class="item mix_row last">
-                    <div class="outer box"> <a href="#" class="product-image"><img src="images/pro25.jpg" alt="Imperdiet id tincidunt" /></a>
+                    <div class="outer box"> <a href="#" class="product-image"><img src="/template/images/pro25.jpg" alt="Imperdiet id tincidunt" /></a>
                       <div class="ic_caption">
                         <h2 class="product-name"><a href="#" title="Imperdiet id tincidunt ">Imperdiet id tincidunt </a></h2>
                         <div class="actions">
@@ -331,7 +335,7 @@
                     </div>
                   </li>
                   <li class="item mix_row">
-                    <div class="outer box"> <a href="#" class="product-image"><img src="images/pro26.jpg" alt="Imperdiet id tincidunt" /></a>
+                    <div class="outer box"> <a href="#" class="product-image"><img src="/template/images/pro26.jpg" alt="Imperdiet id tincidunt" /></a>
                       <div class="ic_caption">
                         <h2 class="product-name"><a href="#" title="Imperdiet id tincidunt ">Imperdiet id tincidunt </a></h2>
                         <div class="actions">
@@ -343,7 +347,7 @@
                     </div>
                   </li>
                   <li class="item mix_row">
-                    <div class="outer box"> <a href="#" class="product-image"><img src="images/pro27.jpg" alt="Imperdiet id tincidunt" /></a>
+                    <div class="outer box"> <a href="#" class="product-image"><img src="/template/images/pro27.jpg" alt="Imperdiet id tincidunt" /></a>
                       <div class="ic_caption">
                         <h2 class="product-name"><a href="#" title="Imperdiet id tincidunt ">Imperdiet id tincidunt </a></h2>
                         <div class="actions">
@@ -355,7 +359,7 @@
                     </div>
                   </li>
                   <li class="item mix_row">
-                    <div class="outer box"> <a href="#" class="product-image"><img src="images/pro28.jpg" alt="Imperdiet id tincidunt" /></a>
+                    <div class="outer box"> <a href="#" class="product-image"><img src="/template/images/pro28.jpg" alt="Imperdiet id tincidunt" /></a>
                       <div class="ic_caption">
                         <h2 class="product-name"><a href="#" title="Imperdiet id tincidunt ">Imperdiet id tincidunt </a></h2>
                         <div class="actions">
@@ -367,7 +371,7 @@
                     </div>
                   </li>
                   <li class="item mix_row">
-                    <div class="outer box"> <a href="#" class="product-image"><img src="images/pro29.jpg" alt="Imperdiet id tincidunt" /></a>
+                    <div class="outer box"> <a href="#" class="product-image"><img src="/template/images/pro29.jpg" alt="Imperdiet id tincidunt" /></a>
                       <div class="ic_caption">
                         <h2 class="product-name"><a href="#" title="Imperdiet id tincidunt ">Imperdiet id tincidunt </a></h2>
                         <div class="actions">
@@ -379,7 +383,7 @@
                     </div>
                   </li>
                   <li class="item mix_row last">
-                    <div class="outer box"> <a href="#" class="product-image"><img src="images/pro30.jpg" alt="Imperdiet id tincidunt" /></a>
+                    <div class="outer box"> <a href="#" class="product-image"><img src="/template/images/pro30.jpg" alt="Imperdiet id tincidunt" /></a>
                       <div class="ic_caption">
                         <h2 class="product-name"><a href="#" title="Imperdiet id tincidunt ">Imperdiet id tincidunt </a></h2>
                         <div class="actions">
@@ -391,7 +395,7 @@
                     </div>
                   </li>
                   <li class="item mix_row">
-                    <div class="outer box"> <a href="#" class="product-image"><img src="images/pro31.jpg" alt="Imperdiet id tincidunt" /></a>
+                    <div class="outer box"> <a href="#" class="product-image"><img src="/template/images/pro31.jpg" alt="Imperdiet id tincidunt" /></a>
                       <div class="ic_caption">
                         <h2 class="product-name"><a href="#" title="Imperdiet id tincidunt ">Imperdiet id tincidunt </a></h2>
                         <div class="actions">
@@ -403,7 +407,7 @@
                     </div>
                   </li>
                   <li class="item mix_row">
-                    <div class="outer box"> <a href="#" class="product-image"><img src="images/pro32.jpg" alt="Imperdiet id tincidunt" /></a>
+                    <div class="outer box"> <a href="#" class="product-image"><img src="/template/images/pro32.jpg" alt="Imperdiet id tincidunt" /></a>
                       <div class="ic_caption">
                         <h2 class="product-name"><a href="#" title="Imperdiet id tincidunt ">Imperdiet id tincidunt </a></h2>
                         <div class="actions">
@@ -415,7 +419,7 @@
                     </div>
                   </li>
                   <li class="item mix_row">
-                    <div class="outer box"> <a href="#" class="product-image"><img src="images/pro33.jpg" alt="Imperdiet id tincidunt" /></a>
+                    <div class="outer box"> <a href="#" class="product-image"><img src="/template/images/pro33.jpg" alt="Imperdiet id tincidunt" /></a>
                       <div class="ic_caption">
                         <h2 class="product-name"><a href="#" title="Imperdiet id tincidunt ">Imperdiet id tincidunt </a></h2>
                         <div class="actions">
@@ -437,7 +441,7 @@
     </div>
   </div>
   <!--End of Home Content-->
-  <div style="display: none;" id="back-top"> <a href="#"><img alt="" src="images/backtop.gif" /></a> </div>
+  <div style="display: none;" id="back-top"> <a href="#"><img alt="" src="/template/images/backtop.gif" /></a> </div>
 </div>
 <!--END OF MAIN CONTENT-->
 <?php include_once(ROOT . '/views/layouts/footer.php'); ?>

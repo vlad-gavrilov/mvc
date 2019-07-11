@@ -1,6 +1,6 @@
 <?php
 
-class SiteController
+class SiteController extends abstractController
 {
   public function actionIndex () {
     include(ROOT . '/views/site/index.php');
