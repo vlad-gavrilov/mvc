@@ -3,7 +3,7 @@
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <title>Themelock.com - Free Themes & Templates</title>
+  <title>Интернет-магазин электроники</title>
   <meta name="description" content="Default Description" />
   <meta name="keywords" content="Magento, Varien, E-commerce" />
   <meta name="robots" content="INDEX,FOLLOW" />
@@ -46,31 +46,57 @@
           <div class="block block-cart header_cart">
             <div class="block-content_pan">
               <div class="summary trigger-minicart">
-                <h2 class="classy"> <span class="cart_icon"><img alt="" src="/template/images/shoppingbag.png" /></span><a href="#">0 item</a> </h2>
+                <h2 class="classy"> <span class="cart_icon"><img alt="" src="/template/images/shoppingbag.png" /></span><a href="/cart"><?php echo $this->total['count']; ?> товаров</a> </h2>
               </div>
-              <div class="remain_cart" id="minicart">
-                <p class="empty">You have no items in your shopping cart.</p>
-                <div class="actions">
-                  <p class="subtotal"> <span class="label">Cart Subtotal:</span> <span class="price">$0.00</span> </p>
-                  <button type="button" title="Checkout" class="button"><span><span>Checkout</span></span></button>
+              <?php if ($this->cartItems): ?>
+                <div class="remain_cart" id="minicart">
+                  <p class="empty">У вас в корзине товары. Вы можете перейти к оформления заказа.</p>
+                  <div class="actions">
+                    <p class="subtotal"> <span class="label">Сумма: </span> <span class="price">$<?php echo $this->total['cost']; ?></span> </p>
+                    <a href="/cart">
+                      <button type="button" title="Оформить заказ" class="button">
+                        <span><span>Оформить заказ</span></span>
+                      </button>
+                    </a>
+                  </div>
                 </div>
-              </div>
+              <?php else: ?>
+                <div class="remain_cart" id="minicart">
+                  <p class="empty">У вас нет товаров в корзине. Вы можете перейти в каталог товаров.</p>
+                  <div class="actions">
+                    <p class="subtotal"> <span class="label">Сумма: </span> <span class="price">$<?php echo $this->total['cost']; ?></span> </p>
+                    <a href="">
+                      <button type="button" title="Каталог" class="button">
+                        <span><span>Каталог</span></span>
+                      </button>
+                    </a>
+                  </div>
+                </div>
+              <?php endif; ?>
             </div>
           </div>
           <!--End Block Cart-->
 
           <!--Start Toplinks-->
           <ul class="links">
-            <li class="first"><a href="#" title="My Account">My Account</a></li>
-            <li><a href="#" title="Checkout" class="top-link-checkout">Checkout</a></li>
-            <li class=" last"><a href="#" title="Log In">Log In</a></li>
+            <li class="first"><a href="#" title="Мой аккаунт">Мой аккаунт</a></li>
+            <li><a href="#" title="Заказ" class="top-link-checkout">Заказ</a></li>
+            <li class=" last"><a href="#" title="Войти">Войти</a></li>
           </ul>
           <!--End Toplinks-->
 
           <!--Start Language-->
           <div class="form-language">
-            <div class="language" id="select-language"> <a title="English" class="flag" href="#" style="background: url(./images/flag_default.gif) no-repeat scroll 0% 0% transparent;">English</a> <a title="French" class="flag" href="#"
-                style="background: url(./images/flag_french.gif) no-repeat scroll 0% 0% transparent;">French</a> <a title="German" class="flag" href="#" style="background: url(./images/flag_german.gif) no-repeat scroll 0% 0% transparent;">German</a>
+            <div class="language" id="select-language">
+              <a title="English" class="flag" href="#" style="background: url(/template/images/flag_default.gif) no-repeat scroll 0% 0% transparent;">
+                English
+              </a>
+              <a title="French" class="flag" href="#" style="background: url(/template/images/flag_french.gif) no-repeat scroll 0% 0% transparent;">
+                French
+              </a>
+              <a title="German" class="flag" href="#" style="background: url(/template/images/flag_german.gif) no-repeat scroll 0% 0% transparent;">
+                German
+              </a>
             </div>
           </div>
           <!--End Language-->
@@ -78,32 +104,37 @@
           <!--Start Currency-->
           <div class="header_currency">
             <div class="block block-currency">
-              <div class="block-content"> <a title="British Pound Sterling" class="currency_icon" style="background: url(./images/currency_GBP.gif) no-repeat" href="#">British Pound</a> <a title="Euro" class="currency_icon"
-                  style="background:url(./images/currency_EUR.gif) no-repeat" href="#">Euro</a> <a title="US Dollar" class="currency_icon selected" style="background: url(./images/currency_USD.gif) no-repeat" href="#">US Dollar</a> </div>
+              <div class="block-content"> <a title="British Pound Sterling" class="currency_icon" style="background: url(/template/images/currency_GBP.gif) no-repeat" href="#">British Pound</a> <a title="Euro" class="currency_icon"
+                  style="background:url(/template/images/currency_EUR.gif) no-repeat" href="#">Euro</a> <a title="US Dollar" class="currency_icon selected" style="background: url(/template/images/currency_USD.gif) no-repeat" href="#">US Dollar</a>
+              </div>
             </div>
           </div>
           <!--End Currency-->
-
         </div>
+
         <!--Start Header Content-->
         <div class="header">
           <ul id="logo">
             <!--Left-->
             <li class="head-container"> <span>{</span>
-              <h2 class="classy">Free shipping over $9.99</h2>
+              <h2 class="classy">Бесплатная доставка при заказе на сумму более $9.99</h2>
               <span>}</span>
-              <p class="top-welcome-msg">Default welcome msg!</p>
+              <p class="top-welcome-msg">Добро пожаловать!</p>
             </li>
             <!--Left-->
             <!--Center Logo-->
             <li class="logo-box">
-              <h1 class="logo"><strong>Santana Commerce</strong><a href="#" title="Santana Commerce" class="logo"><img src="/template/images/logo.png" alt="Santana Commerce" /></a></h1>
+              <h1 class="logo"><strong>Santana Commerce</strong>
+                <a href="/" title="Santana Commerce" class="logo">
+                  <img src="/template/images/logo.png" alt="Santana Commerce" />
+                </a>
+              </h1>
             </li>
             <!--Center Logo-->
 
             <!--Right-->
             <li class="head-container"> <span>{</span>
-              <h2 class="classy">Call us - +1 999 999 9999</h2>
+              <h2 class="classy">Телефон - +8 800 555 35 35</h2>
               <span>}</span>
               <div id="search-bar">
                 <div class="top-bar">
@@ -121,104 +152,9 @@
           <!--Start of Navigation-->
           <div class="nav-container">
             <ul id="nav">
-              <li><a href="#">Home</a></li>
-              <li class="level0 nav-1 level-top first parent"> <a href="#" class="level-top"> <span>Womens</span> </a>
-                <ul class="level0">
-                  <li class="level1 first parent"> <a href="#"> <span>Sweaters</span> </a>
-                    <ul class="level1">
-                      <li class="level2 first"> <a href="#"> <span>Cardigans</span> </a> </li>
-                      <li class="level2"> <a href="#"> <span>Pullovers</span> </a> </li>
-                      <li class="level2"> <a href="#"> <span>Novelty Sweaters</span> </a> </li>
-                      <li class="level2 last"> <a href="#"> <span>Medium Wash</span> </a> </li>
-                    </ul>
-                  </li>
-                  <li class="level1 parent"> <a href="#"> <span>Knit Tops</span> </a>
-                    <ul class="level1">
-                      <li class="level2 first"> <a href="#"> <span>Dressy</span> </a> </li>
-                      <li class="level2"> <a href="#"> <span>Sporty</span> </a> </li>
-                      <li class="level2"> <a href="#"> <span>Knit Jackets</span> </a> </li>
-                      <li class="level2 last"> <a href="#"> <span>Tanks</span> </a> </li>
-                    </ul>
-                  </li>
-                  <li class="level1 parent"> <a href="#"> <span>Shirts &amp; Blouses</span> </a>
-                    <ul class="level1">
-                      <li class="level2 first"> <a href="#"> <span>Dressy</span> </a> </li>
-                      <li class="level2"> <a href="#"> <span>Casual</span> </a> </li>
-                      <li class="level2"> <a href="#"> <span>A|X Logos</span> </a> </li>
-                      <li class="level2"> <a href="#"> <span>Contemporary</span> </a> </li>
-                      <li class="level2 last"> <a href="#"> <span>Plus Size</span> </a> </li>
-                    </ul>
-                  </li>
-                  <li class="level1 parent"> <a href="#"> <span>Tee Shirts</span> </a>
-                    <ul class="level1">
-                      <li class="level2 first"> <a href="#"> <span>Crew Neck</span> </a> </li>
-                      <li class="level2"> <a href="#"> <span>V-Neck</span> </a> </li>
-                      <li class="level2 last"> <a href="#"> <span>Scoop Neck</span> </a> </li>
-                    </ul>
-                  </li>
-                  <li class="level1 last parent"> <a href="#"> <span>Outerwear &amp; Jackets</span> </a>
-                    <ul class="level1">
-                      <li class="level2 first"> <a href="#"> <span>Scoop Neck</span> </a> </li>
-                      <li class="level2"> <a href="#"> <span>Lightweight Layering</span> </a> </li>
-                      <li class="level2"> <a href="#"> <span>Stock Up &amp; Save</span> </a> </li>
-                      <li class="level2"> <a href="#"> <span>As Seen In</span> </a> </li>
-                      <li class="level2 last"> <a href="#"> <span>Trends</span> </a> </li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              <li class="level0 nav-2 level-top parent"> <a href="#" class="level-top"> <span>Mens</span> </a>
-                <ul class="level0">
-                  <li class="level1 first parent"> <a href="#"> <span>Apparel</span> </a>
-                    <ul class="level1">
-                      <li class="level2 first"> <a href="#"> <span>Blazers &amp; Sport Coats</span> </a> </li>
-                      <li class="level2"> <a href="#"> <span>Coats &amp; Jackets</span> </a> </li>
-                      <li class="level2"> <a href="#"> <span>Hoodies &amp; Track Jackets</span> </a> </li>
-                      <li class="level2"> <a href="#"> <span>Shorts</span> </a> </li>
-                      <li class="level2 last"> <a href="#"> <span>Shirts</span> </a> </li>
-                    </ul>
-                  </li>
-                  <li class="level1 parent"> <a href="#"> <span>Shoes &amp; Accessories</span> </a>
-                    <ul class="level1">
-                      <li class="level2 first"> <a href="#"> <span>Casual</span> </a> </li>
-                      <li class="level2"> <a href="#"> <span>Formals</span> </a> </li>
-                      <li class="level2"> <a href="#"> <span>Sports</span> </a> </li>
-                      <li class="level2"> <a href="#"> <span>Slippers</span> </a> </li>
-                      <li class="level2 last"> <a href="#"> <span>Sandals</span> </a> </li>
-                    </ul>
-                  </li>
-                  <li class="level1 parent"> <a href="#"> <span>Sweaters</span> </a>
-                    <ul class="level1">
-                      <li class="level2 first"> <a href="#"> <span>Pullover Sweaters</span> </a> </li>
-                      <li class="level2"> <a href="#"> <span>Cardigans</span> </a> </li>
-                      <li class="level2"> <a href="#"> <span>Lorem Ipsum</span> </a> </li>
-                      <li class="level2"> <a href="#"> <span>Donec ipsum sem</span> </a> </li>
-                      <li class="level2 last"> <a href="#"> <span>Sed in metu</span> </a> </li>
-                    </ul>
-                  </li>
-                  <li class="level1 parent"> <a href="#"> <span>Coats &amp; Jackets</span> </a>
-                    <ul class="level1">
-                      <li class="level2 first"> <a href="#"> <span>Knit Jackets</span> </a> </li>
-                      <li class="level2"> <a href="#"> <span>Coats</span> </a> </li>
-                      <li class="level2"> <a href="#"> <span>blazers &amp; vests</span> </a> </li>
-                      <li class="level2 last"> <a href="#"> <span>Denim Shop</span> </a> </li>
-                    </ul>
-                  </li>
-                  <li class="level1 last parent"> <a href="#"> <span>Jeans</span> </a>
-                    <ul class="level1">
-                      <li class="level2 first"> <a href="#"> <span>Find Your Fit</span> </a> </li>
-                      <li class="level2"> <a href="#"> <span>Accumsan</span> </a> </li>
-                      <li class="level2"> <a href="#"> <span>Vivamus</span> </a> </li>
-                      <li class="level2"> <a href="#"> <span>Pellentesque </span> </a> </li>
-                      <li class="level2 last"> <a href="#"> <span>Quisque </span> </a> </li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              <li class="level0 level-top"> <a href="#" class="level-top"> <span>Furniture</span> </a> </li>
-              <li class="level0 level-top"> <a href="#" class="level-top"> <span>Accesorries</span> </a> </li>
-              <li class="level0 level-top"> <a href="#" class="level-top"> <span>Computer</span> </a> </li>
-              <li class="level0 level-top last"> <a href="#" class="level-top"> <span>Electronics</span> </a> </li>
+              <?php foreach ($this->listOfCategories as $key => $category): ?>
+                <li><a href="/category/<?php echo $category['id']; ?>"><?php echo $category['name'] ?></a></li>
+              <?php endforeach; ?>
             </ul>
           </div>
           <!--End of Navigation-->
