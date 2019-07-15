@@ -56,8 +56,8 @@
                 </span>
               </div>
               <div class="actions">
-                <a href="/cart/<?php echo $product["id"]; ?>">
-                  <button type="button" title="Add to Cart" class="button btn-cart">
+                <a href="">
+                  <button type="button" title="Add to Cart" class="button btn-cart add-to-cart" data-id="<?php echo $product['id']; ?>">
                     <span><span>В корзину</span></span>
                   </button>
                 </a>

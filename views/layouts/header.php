@@ -46,7 +46,7 @@
           <div class="block block-cart header_cart">
             <div class="block-content_pan">
               <div class="summary trigger-minicart">
-                <h2 class="classy"> <span class="cart_icon"><img alt="" src="/template/images/shoppingbag.png" /></span><a href="/cart"><?php echo $this->total['count']; ?> товаров</a> </h2>
+                <h2 class="classy"> <span class="cart_icon"><img alt="" src="/template/images/shoppingbag.png" /></span><a href="/cart"><span id="cart-count"><?php echo $this->total['count']; ?></span> товаров</a> </h2>
               </div>
               <?php if ($this->cartItems): ?>
                 <div class="remain_cart" id="minicart">
@@ -65,7 +65,7 @@
                   <p class="empty">У вас нет товаров в корзине. Вы можете перейти в каталог товаров.</p>
                   <div class="actions">
                     <p class="subtotal"> <span class="label">Сумма: </span> <span class="price">$<?php echo $this->total['cost']; ?></span> </p>
-                    <a href="">
+                    <a href="/">
                       <button type="button" title="Каталог" class="button">
                         <span><span>Каталог</span></span>
                       </button>
@@ -134,7 +134,7 @@
 
             <!--Right-->
             <li class="head-container"> <span>{</span>
-              <h2 class="classy">Телефон - +8 800 555 35 35</h2>
+              <h2 class="classy">Телефон - +7 800 123 45 67</h2>
               <span>}</span>
               <div id="search-bar">
                 <div class="top-bar">

@@ -47,6 +47,25 @@ class Cart
     }
     // Записываем массив с товарами в сессию
     $_SESSION['products'] = $productsInCart;
+    // Возвращаем количество товаров в корзине
+    return self::countItems();
+  }
+
+  public static function countItems()
+  {
+      // Проверка наличия товаров в корзине
+      if (isset($_SESSION['products'])) {
+          // Если массив с товарами есть
+          // Подсчитаем и вернем их количество
+          $count = 0;
+          foreach ($_SESSION['products'] as $id => $quantity) {
+              $count = $count + $quantity;
+          }
+          return $count;
+      } else {
+          // Если товаров нет, вернем 0
+          return 0;
+      }
   }
 
   public static function deleteItemFromCart($id) {

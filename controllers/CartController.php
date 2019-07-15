@@ -11,8 +11,13 @@ class CartController extends Controller
 
   public function actionAdd($id) {
     Cart::addIntoCart($id);
-    $referrer = $_SERVER['HTTP_REFERER'];
+    $referrer = $_SERVER['HTTP_REFERER']; //TODO доделать в случае, если $_SERVER['HTTP_REFERER'] == null
     header("Location: $referrer");
+  }
+
+  public function actionAddAjax($id) {
+    echo Cart::addIntoCart($id);
+    return true;
   }
 
   public function actionDelete($id) {
