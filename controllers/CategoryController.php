@@ -2,7 +2,7 @@
 
 class CategoryController extends Controller
 {
-  public function actionView ($categoryId) {
+  public function actionView($categoryId) {
     $categoryItem = Categories::getCategoryById($categoryId);
     $productList = Products::getProductsInCategory($categoryId);
     // var_dump($productList);

@@ -79,9 +79,15 @@
 
           <!--Start Toplinks-->
           <ul class="links">
-            <li class="first"><a href="#" title="Мой аккаунт">Мой аккаунт</a></li>
-            <li><a href="#" title="Заказ" class="top-link-checkout">Заказ</a></li>
-            <li class=" last"><a href="#" title="Войти">Войти</a></li>
+            <!-- <li><a href="#" title="Заказ" class="top-link-checkout">Заказ</a></li> -->
+            <?php if($this->isRegistered): ?>
+              <li class="first"><a href="/user" title="<?php echo $this->userInfo['name']; ?>"><?php echo $this->userInfo['name']; ?></a></li>
+              <li class=" last"><a href="/user/logout" title="Войти">Выйти</a></li>
+            <?php else: ?>
+              <!-- <li class="first"><a href="/user" title="Мой аккаунт">Мой аккаунт</a></li> -->
+              <li><a href="/user/register" title="Регистрация" class="top-link-checkout">Регистрация</a></li>
+              <li class=" last"><a href="/user/login" title="Войти">Войти</a></li>
+            <?php endif; ?>
           </ul>
           <!--End Toplinks-->
 

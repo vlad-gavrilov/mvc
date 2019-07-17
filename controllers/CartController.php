@@ -2,7 +2,7 @@
 
 class CartController extends Controller
 {
-  public function actionIndex () {
+  public function actionIndex() {
     $cartItems = $this->cartItems;
     $total = $this->total;
     include(ROOT . '/views/cart/cart.php');

@@ -76,4 +76,26 @@ class Cart
         unset($_SESSION['products'][$id]);
     }
   }
+
+  public static function moveCartFromSessionToDb() {
+    // Получаем id пользователя
+    $id = User::isLogged();
+
+    $db = Db::getConnection();
+    $sql = 'INSERT INTO cart (id_user, id_product, count) VALUES (:id_user, :id_product, :count)';
+    $result = $db->prepare($sql);
+    $result->bindParam(':id_user', $id, PDO::PARAM_INT);
+    // echo var_dump($_SESSION);
+    foreach ($_SESSION['products'] as $productId => $count) {
+      // echo $productId . ' => ' . $count . '<br>';
+      $result->bindParam(':id_product', $productId, PDO::PARAM_INT);
+      $result->bindParam(':count', $count, PDO::PARAM_INT);
+      $result->execute();
+      if (isset($_SESSION['products'][$productId])) {
+        unset($_SESSION['products'][$productId]);
+      }
+    }
+    unset($_SESSION['products']);
+  }
+
 }
