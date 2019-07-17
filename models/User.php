@@ -25,6 +25,14 @@ class User
     return $errors;
   }
 
+  public static function checkDataEdit($userData) {
+    $errors = false;
+    if (self::incorrectName($userData['name'])) { $errors[] = 'Имя должно должно содержать как минимум два символа'; }
+    if (self::incorrectEmail($userData['email'])) { $errors[] = 'Неправильный email'; }
+    if (self::incorrectPassword($userData['password'])) { $errors[] = 'Пароль должен быть длинее пяти символов'; }
+    return $errors;
+  }
+
   public static function incorrectName($name) {
     if (strlen($name) < 2) {
         return true;
