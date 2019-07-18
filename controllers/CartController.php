@@ -8,7 +8,7 @@ class CartController extends Controller
   /**
    * Action для страницы отображения содержимого корзины
    *
-   * @return boolean true
+   * @return true
    */
   public function actionIndex() {
     // Получаем список элементов в корзине через переменную $this->cartItems инициализированную в конструкторе класса-родителя Controller
@@ -38,7 +38,7 @@ class CartController extends Controller
    * Action для добавления товара в корзину асинхронным способом
    *
    * @param integer $id Идентификатор товара
-   * @return boolean true
+   * @return true
    */
   public function actionAddAjax($id) {
     // Если пользователь авторизован, то вызываем метод класса CartAuthorized, иначе - класса CartUnauthorized

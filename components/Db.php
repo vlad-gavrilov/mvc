@@ -1,11 +1,22 @@
 <?php
 
+/**
+ * Компонент для работы с базой данных
+ */
 abstract class Db
 {
-  // DataBase Handle: дескриптор базы данных
+  /**
+   * DataBase Handle: дескриптор базы данных
+   *
+   * @var \PDO Объкт класса PDO
+   */
   private static $DBH;
 
-  // Открыть соединение с БД
+  /**
+   * Открыть соединение с БД
+   *
+   * @return void
+   */
   private static function openConnection() {
     // Получаем параметры подключения из файла
     $paramsPath = ROOT . '/config/db_params.php';
@@ -28,15 +39,23 @@ abstract class Db
     }
   }
 
-  // Получить соединение с БД
+  /**
+   * Получить соединение с БД
+   *
+   * @return \PDO
+   */
   public static function getConnection() {
     // Если соединение еще не открыто, то открываем новое соединение
     if (!self::$DBH) self::openConnection();
     return self::$DBH;
   }
 
-  // Закрыть соединение с БД
-  public static function closeConnection(){ //TODO Нужно ли закрывать соединение?
+  /**
+   * Закрыть соединение с БД
+   *
+   * @return \PDO
+   */
+  public static function closeConnection(){
     self::$DBH = null;
   }
 }
