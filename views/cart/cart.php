@@ -42,6 +42,11 @@
         </div>
       </li>
     </ol>
+    <a href="/cart/checkout" style="display: inline-block;">
+      <button type="button" class="button">
+        <span><span>Оформить заказ</span></span>
+      </button>
+    </a>
     <!--End of Checkout Steps-->
   <?php else: ?>
       <h2 align="center">У вас нет товаров в корзине</h2>

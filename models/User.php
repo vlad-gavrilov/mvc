@@ -73,7 +73,9 @@ class User
    * @return true|void
    */
   public static function incorrectName($name) {
-    if (strlen($name) < 2) {
+    // Длина строки не должна быть менее 2 символа
+    // Используется кодировка UTF-8
+    if (mb_strlen($name, 'UTF-8') < 2) {
         return true;
     }
   }
@@ -97,8 +99,27 @@ class User
    * @return true|void
    */
   public static function incorrectPassword($password) {
-    if (strlen($password) < 6) {
+    // Длина строки не должна быть менее 6 символов
+    // Используется кодировка UTF-8
+    if (mb_strlen($password, 'UTF-8') < 6) {
         return true;
+    }
+  }
+
+  /**
+   * Обнаружение наличия ошибок в введенном телефоне
+   *
+   * @param string $phone Телефон пользователя
+   * @return true|void
+   */
+  public static function incorrectPhone($phone) {
+    // Длина строки не должна быть менее 5 и более 14 символов
+    // Используется кодировка UTF-8
+    if (mb_strlen($phone, 'UTF-8') < 5 || mb_strlen($phone, 'UTF-8') > 14) {
+      // Если строка состоит только из числовых символов
+      if (ctype_digit($phone)) {
+        return true;
+      }
     }
   }
 

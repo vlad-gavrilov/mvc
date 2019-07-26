@@ -27,6 +27,20 @@ class CartUnauthorized
   }
 
   /**
+   * Получить id и количество товаров в корзине
+   *
+   * @return array|null
+   */
+  public static function getIdAndCount() {
+    // Если корзина не пуста
+    if (isset($_SESSION['products'])) {
+      return $_SESSION['products'];
+    }
+    // Если корзина пуста
+    return null;
+  }
+
+  /**
    * Получить общее количество и стоимость товаров в корзине
    *
    * @return array
@@ -90,7 +104,7 @@ class CartUnauthorized
   }
 
   /**
-   * Удалить из корзины
+   * Удалить из корзины товар по идентификатору
    *
    * @param integer $id Идентификатор товара
    * @return void
@@ -100,6 +114,19 @@ class CartUnauthorized
     if (isset($_SESSION['products'][$id])) {
       // Удаляем его
       unset($_SESSION['products'][$id]);
+    }
+  }
+
+  /**
+   * Удалить из корзины все товары
+   *
+   * @return void
+   */
+  public static function clear() {
+    // Если такой товары в корзине есть
+    if (isset($_SESSION['products'])) {
+      // Удаляем их
+      unset($_SESSION['products']);
     }
   }
 

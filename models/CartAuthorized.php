@@ -33,6 +33,32 @@ class CartAuthorized
   }
 
   /**
+   * Получить id и количество товаров в корзине
+   *
+   * @return array
+   */
+  public static function getIdAndCount() {
+    // Получаем id пользователя
+    $userId = User::isLogged();
+
+    // Соединение с БД
+    $db = Db::getConnection();
+    // Выбор id и количества товаров данного пользователя
+    $sql = 'SELECT id_product, count FROM cart WHERE id_user = :id';
+    $result = $db->prepare($sql);
+    $result->bindParam(':id', $userId, PDO::PARAM_INT);
+    $result->execute();
+
+    $productsInCart = array();
+
+    while ($row = $result->fetch()) {
+      // Формируем массив состоящий из id и количества товаров в корзине
+      $productsInCart[$row['id_product']] = $row['count'];
+    }
+    return $productsInCart;
+  }
+
+  /**
    * Получить общее количество и стоимость товаров в корзине
    *
    * @param array $cartItems Содержимое корзины
@@ -120,7 +146,7 @@ class CartAuthorized
   }
 
   /**
-   * Удалить товар из корзины
+   * Удалить из корзины товар по идентификатору
    *
    * @param integer $idProduct Идентификатор продукта
    * @return boolean
@@ -134,6 +160,22 @@ class CartAuthorized
     $result = $db->prepare($sql);
     $result->bindParam(':id_user', $idUser, PDO::PARAM_INT);
     $result->bindParam(':id_product', $idProduct, PDO::PARAM_INT);
+    return $result->execute();
+  }
+
+  /**
+   * Удалить из корзины все товары
+   *
+   * @return void
+   */
+  public static function clear() {
+    // Получаем id пользователя
+    $idUser = User::isLogged();
+    // Соединение с БД
+    $db = Db::getConnection();
+    $sql = 'DELETE FROM cart WHERE id_user = :id_user';
+    $result = $db->prepare($sql);
+    $result->bindParam(':id_user', $idUser, PDO::PARAM_INT);
     return $result->execute();
   }
 

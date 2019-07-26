@@ -53,7 +53,7 @@
                   <p class="empty">У вас в корзине товары. Вы можете перейти к оформления заказа.</p>
                   <div class="actions">
                     <p class="subtotal"> <span class="label">Сумма: </span> <span class="price">$<?php echo $this->total['cost']; ?></span> </p>
-                    <a href="/cart">
+                    <a href="/cart/checkout">
                       <button type="button" title="Оформить заказ" class="button">
                         <span><span>Оформить заказ</span></span>
                       </button>
