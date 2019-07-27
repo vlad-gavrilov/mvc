@@ -67,4 +67,118 @@ class Products
     }
     return $latestList;
   }
+
+  /**
+   * Получение списка товаров
+   *
+   * @return array
+   */
+  public static function getProductsList() {
+    // Соединение с БД
+    $db = Db::getConnection();
+    // Все товары из списка
+    $result = $db->query('SELECT id, name, category_id, code, price, availability FROM product ORDER BY id ASC');
+    $products = array();
+    $i = 0;
+    while ($row = $result->fetch()) {
+        $products[$i]['id'] = $row['id'];
+        $products[$i]['name'] = $row['name'];
+        $products[$i]['category_id'] = $row['category_id'];
+        $products[$i]['code'] = $row['code'];
+        $products[$i]['price'] = $row['price'];
+        $products[$i]['availability'] = $row['availability'];
+        ++$i;
+    }
+    return $products;
+  }
+
+  /**
+   * Добавляет новый товар
+   *
+   * @param array $options Массив с информацией о товаре
+   * @return integer
+   */
+  public static function createProduct($options) {
+    // Соединение с БД
+    $db = Db::getConnection();
+
+    // Вставляем новый товар в таблицу БД
+    $sql = 'INSERT INTO product
+            (name, code, price, category_id, brand, availability, description, is_new, is_recommended, status)
+            VALUES
+            (:name, :code, :price, :category_id, :brand, :availability, :description, :is_new, :is_recommended, :status)';
+
+    $result = $db->prepare($sql);
+    $result->bindParam(':name', $options['name'], PDO::PARAM_STR);
+    $result->bindParam(':code', $options['code'], PDO::PARAM_STR);
+    $result->bindParam(':price', $options['price'], PDO::PARAM_INT);
+    $result->bindParam(':category_id', $options['category_id'], PDO::PARAM_INT);
+    $result->bindParam(':brand', $options['brand'], PDO::PARAM_STR);
+    $result->bindParam(':availability', $options['availability'], PDO::PARAM_INT);
+    $result->bindParam(':description', $options['description'], PDO::PARAM_STR);
+    $result->bindParam(':is_new', $options['is_new'], PDO::PARAM_INT);
+    $result->bindParam(':is_recommended', $options['is_recommended'], PDO::PARAM_INT);
+    $result->bindParam(':status', $options['status'], PDO::PARAM_INT);
+    // Если новый товар успешно вставлен в таблицу
+    if ($result->execute()) {
+      // Возвращаем id добавленной записи
+      return $db->lastInsertId();
+    }
+    // Иначе возвращаем 0
+    return 0;
+  }
+
+  /**
+   * Редактирует товар
+   *
+   * @param array $options Массив с информацией о товаре
+   * @return true|null
+   */
+  public static function updateProduct($options) {
+    // Соединение с БД
+    $db = Db::getConnection();
+    // Редактируем товар
+    $sql = 'UPDATE product
+            SET
+            name = :name,
+            code = :code,
+            price = :price,
+            category_id = :category_id,
+            brand = :brand,
+            availability = :availability,
+            description = :description,
+            is_new = :is_new,
+            is_recommended = :is_recommended,
+            status = :status
+            WHERE id = :id';
+    $result = $db->prepare($sql);
+    $result->bindParam(':name', $options['name'], PDO::PARAM_STR);
+    $result->bindParam(':code', $options['code'], PDO::PARAM_STR);
+    $result->bindParam(':price', $options['price'], PDO::PARAM_INT);
+    $result->bindParam(':category_id', $options['category_id'], PDO::PARAM_INT);
+    $result->bindParam(':brand', $options['brand'], PDO::PARAM_STR);
+    $result->bindParam(':availability', $options['availability'], PDO::PARAM_INT);
+    $result->bindParam(':description', $options['description'], PDO::PARAM_STR);
+    $result->bindParam(':is_new', $options['is_new'], PDO::PARAM_INT);
+    $result->bindParam(':is_recommended', $options['is_recommended'], PDO::PARAM_INT);
+    $result->bindParam(':status', $options['status'], PDO::PARAM_INT);
+    $result->bindParam(':id', $options['id'], PDO::PARAM_INT);
+    return $result->execute();
+  }
+
+  /**
+   * Удаляет товар
+   *
+   * @param integer $id Идентификатор товара
+   * @return true|null
+   */
+  public static function deleteProduct($id) {
+    // Соединение с БД
+    $db = Db::getConnection();
+    // Удаляем товар с заданным id
+    $sql = 'DELETE FROM product WHERE id = :id';
+    $result = $db->prepare($sql);
+    $result->bindParam(':id', $id, PDO::PARAM_INT);
+    return $result->execute();
+  }
 }
