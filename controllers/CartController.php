@@ -22,14 +22,11 @@ class CartController extends Controller
   /**
    * Action для добавления товара в корзину синхронным способом
    *
-   * Этот метод не используется т.к. есть более совершенный метод actionAddAjax
-   * @deprecated
-   *
    * @param integer $id Идентификатор товара
    * @return void
    */
   public function actionAdd($id) {
-    CartUnauthorized::addIntoCart($id);
+    ($this->isRegistered) ? CartAuthorized::addIntoCart($id) : CartUnauthorized::addIntoCart($id);
     $referrer = $_SERVER['HTTP_REFERER']; //TODO доделать в случае, если $_SERVER['HTTP_REFERER'] == null
     header("Location: $referrer");
   }

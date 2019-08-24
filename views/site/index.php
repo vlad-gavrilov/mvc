@@ -1,64 +1,110 @@
 <?php include_once(ROOT . '/views/layouts/header.php'); ?>
-<!--START OF MAIN CONTENT-->
-<div class="main-container col1-layout">
-  <!--Start of Home Content-->
-  <div class="main">
-    <div class="col-main">
-      <div class="std">
-
-        <!--Start Banner-->
-        <div class="banner_box">
-          <div class="slider-wrapper banner">
-            <!--Place your banner images-->
-            <div id="slider" class="banner_slider">
-              <a href="#"><img src="/template/images/banner_1.jpg" alt="" /></a>
-              <a href="#"><img src="/template/images/banner_2.jpg" alt="" /></a>
-              <a href="#"><img src="/template/images/banner_3.jpg" alt="" /></a>
-              <a href="#"><img src="/template/images/banner_4.jpg" alt="" /></a>
+<div class="content container-fluid">
+  <p class="text-center m-0">
+    <a class="navbar-brand brand-wrap" href="/">
+      <span class="brand-name font-weight-bold">YourShop</span>
+    </a>
+  </p>
+  <nav class="categories row nav nav-pills nav-justified border-top border-bottom mb-3">
+  <?php foreach ($this->listOfCategories as $key => $category): ?>
+    <div class="col-12 col-sm-6 col-lg-3">
+      <a class="nav-item nav-link" href="/category/<?php echo $category['id']; ?>">
+        <div class="text-left text-lg-center">
+          <i class="fas fa-laptop"></i>
+          <?php echo $category['name'] ?>
+        </div>
+      </a>
+    </div>
+  <?php endforeach; ?>
+  </nav>
+  <div class="container-fluid p-0">
+    <div class="row">
+      <div class="col-12">
+        <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carousel" data-slide-to="0"></li>
+            <li data-target="#carousel" data-slide-to="1"></li>
+            <li data-target="#carousel" data-slide-to="2" class="active"></li>
+            <li data-target="#carousel" data-slide-to="3"></li>
+            <li data-target="#carousel" data-slide-to="4"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item ">
+              <img src="template/images/frontpage/laptop2.jpg" class="d-block w-100" alt="laptop">
+            </div>
+            <div class="carousel-item">
+              <img src="template/images/frontpage/graphics2.jpg" class="d-block w-100" alt="tablet">
+            </div>
+            <div class="carousel-item active">
+              <img src="template/images/frontpage/tablet2.jpg" class="d-block w-100" alt="server">
+            </div>
+            <div class="carousel-item">
+              <img src="template/images/frontpage/code2.jpg" class="d-block w-100" alt="code">
+            </div>
+            <div class="carousel-item">
+              <img src="template/images/frontpage/server2.jpg" class="d-block w-100" alt="graphics">
             </div>
           </div>
-          <div class="promotional_block">
-            <!--Place your promotional images-->
-            <div class="block_one"> <a href="#"><img src="/template/images/promo1.jpg" alt="" /></a> </div>
-            <div class="block_one"> <a href="#"><img src="/template/images/promo2.jpg" alt="" /></a> </div>
-            <div class="block_two"> <a href="#"><img src="/template/images/promo3.jpg" alt="" /></a> </div>
-          </div>
+          <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </a>
+          <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </a>
         </div>
-        <!--End Banner-->
-
-        <!--Start New Products-->
-        <div class="box-center">
-          <div class="special">
-            <div style="visibility: visible;" id="mix_container" class="mix_container">
-              <h1 class="category_page_title">Новые товары</h1>
-              <div class="mix_nav"> <span id="mix_prev" class="mix_prev">Previous</span> <span id="mix_next" class="mix_next">Next</span> </div>
-              <div id="container" class="mix_wrapper">
-                <ul style="position: relative;" class="mix_gallery">
-                  <?php $i = 1; foreach($latestList as $key => $product): ?>
-                    <li class="item mix_row<?php if (!($i % 5)) echo ' last'; ?>">
-                      <div class="outer box"> <a href="/product/<?php echo $product['id']; ?>" class="product-image"><img src="/upload/images/products/<?php echo $product['id']; ?>.jpg" width="165" height="165" alt="<?php echo $product['name']; ?>" /></a>
-                        <div class="ic_caption">
-                          <h2 class="product-name"><a href="/product/<?php echo $product['id']; ?>" title="<?php echo $product['name']; ?>"><?php echo $product['name']; ?></a></h2>
-                          <div>
-                            <a rel="example_group" href="/product/<?php echo $product['id']; ?>" class="fancybox quickllook">В корзину</a>
-                            <div class="price-box"> <span class="regular-price"> <span class="price">$<?php echo $product['price']; ?></span> </span> </div>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                  <?php ++$i;  endforeach; ?>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!--End New Products-->
-
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-12 col-lg-4 pb-1"><img src="template/images/frontpage/code.jpg" class="rounded img-fluid" alt="..."></div>
+      <div class="col-12 col-lg-4 pb-1"><img src="template/images/frontpage/tablet.jpg" class="rounded img-fluid" alt="..."></div>
+      <div class="col-12 col-lg-4 pb-1"><img src="template/images/frontpage/graphics.jpg" class="rounded img-fluid" alt="..."></div>
+    </div>
+  </div>
+  <hr>
+  <figure class="p-0">
+    <div class="fixed-wrap">
+      <div id="fixed">
+      </div>
+    </div>
+  </figure>
+  <div class="container-fluid padding">
+    <div class="row alert text-center">
+      <div class="col-12">
+        <h5>Рекомендованные товары</h5>
       </div>
     </div>
   </div>
-  <!--End of Home Content-->
-  <div style="display: none;" id="back-top"> <a href="#"><img alt="" src="/template/images/backtop.gif" /></a> </div>
+  <hr>
+  <div class="container pb-3">
+    <?php for ($i = 0; $i < 6; $i++): ?>
+      <?php if ($i % 3 == 0): ?>
+        <div class="row pb-3">
+      <?php endif; ?>
+
+      <div class="col-md-4 mb-1">
+        <div class="card">
+          <img src="/upload/images/products/<?php echo $latestList[$i]['id']; ?>.jpg" alt="" class="card-img-top p-3" height="250">
+          <div class="card-body">
+            <!-- <h4 class="card-title"><?php echo $latestList[$i]['name']; ?></h4> -->
+            <p class="card-text font-weight-bold"><?php echo $latestList[$i]['name']; ?></p>
+            <span class="font-weight-bold">
+              <h2>$<?php echo $latestList[$i]['price']; ?></h2>
+            </span>
+            <hr class="w-100">
+            <div class="d-flex flex-column flex-xl-row justify-content-between">
+              <a href="/product/<?php echo $latestList[$i]['id']; ?>" class="btn btn-secondary mb-1 mb-xl-0"><i class="fas fa-eye"></i> Посмотреть</a>
+              <a href="/cart/add/<?php echo $latestList[$i]['id']; ?>" class="btn btn-success"><i class="fas fa-shopping-basket"></i> В корзину</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <?php if (($i + 1) % 3 == 0): ?>
+        </div>
+      <?php endif; ?>
+    <?php endfor; ?>
+  </div>
 </div>
-<!--END OF MAIN CONTENT-->
+</div>
 <?php include_once(ROOT . '/views/layouts/footer.php'); ?>

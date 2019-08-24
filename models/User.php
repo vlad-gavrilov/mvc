@@ -117,7 +117,7 @@ class User
     // Используется кодировка UTF-8
     if (mb_strlen($phone, 'UTF-8') < 5 || mb_strlen($phone, 'UTF-8') > 14) {
       // Если строка состоит только из числовых символов
-      if (ctype_digit($phone)) {
+      if (!ctype_digit($phone)) {
         return true;
       }
     }

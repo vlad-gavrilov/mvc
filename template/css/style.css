@@ -1,0 +1,157 @@
+body {
+  font-family: 'Istok Web', sans-serif;
+  font-size: 0.9em;
+  background-color: #f9f9f9;
+}
+
+.brand-name {
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+}
+
+.brand-wrap {
+  font-size: 4em;
+  color: #555;
+}
+
+.brand-wrap:hover {
+  color: #555;
+}
+
+.navbar, .footer {
+  background-color: #f2f2f2;
+}
+
+.footer a {
+  color: #222;
+}
+
+/* Иконки */
+.icons {
+  font-size: 2rem;
+}
+
+.icons a {
+  color: #555;
+  transition: all 1s ease;
+}
+
+.icons a .fa-facebook-f:hover {
+  color: #3b5998;
+}
+
+.icons a .fa-twitter:hover {
+  color: #1da1f2;
+}
+
+.icons a .fa-vk:hover {
+  color: #3b5998;
+}
+
+.icons a .fa-instagram:hover {
+  color: #833ab4;
+}
+
+.cards a:hover {
+  color: #71f;
+}
+/* ------ */
+
+.nav-link {
+  color: #333;
+}
+
+/* Категории */
+.categories a {
+  color: #666;
+}
+
+.categories a:hover {
+  background-color: #efefef;
+  color: #111;
+}
+/* ------ */
+
+/* Тень от футера */
+.footer {
+  box-shadow: 0px -3px 30px #ddd;
+}
+/* ------ */
+
+/* Заставка на главной*/
+#fixed {
+  height: 400px;
+  background: url(../images/frontpage/laptop.jpg) no-repeat center fixed;
+  background-blend-mode: multiply;
+  background-color: lightblue;
+  background-size: cover;
+
+}
+/* ------ */
+
+/* Горизонтальная черта */
+body hr {
+  border-top: 2px solid #f0f0f0;
+  width: 90%;
+}
+/* ------ */
+
+/* Логин */
+.form-signin {
+  background-color: #f2f2f2;
+}
+
+.login-form hr {
+  border-top: 2px solid #999;
+  width: 100%;
+  margin-top: 30px;
+}
+/* ------ */
+
+/* Прижатие футера к низу страницы */
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#wrapper {
+  flex: 1 0 auto;
+}
+
+.content {
+  margin-top: 57px;
+}
+
+.footer {
+  flex: 0 0 auto;
+}
+/* ------ */
+
+
+/* Убирает значок выпадающего меню */
+/* .userphoto > a.nav-link::after {
+  content: none;
+} */
+/* ------ */
+
+/* Пользовательский цвет пагинации (зеленый) */
+.customPagination .pagination > li > a,
+.customPagination .pagination > li > span {
+  border: 1px solid #28a745 !important;
+  color: #28a745 !important;
+}
+
+.pagination > li.active> a {
+  background: #c1f0cc !important;
+}
+
+.pagination > li.disabled> a {
+  background: #eee !important;
+  color: #999 !important;
+}
+/* ------ */

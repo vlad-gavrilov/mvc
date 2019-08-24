@@ -1,0 +1,42 @@
+html {
+  height: 100%;
+}
+
+body {
+  font-family: 'Istok Web', sans-serif;
+  background-color: #f9f9f9;
+  height: 100%;
+}
+
+.navbar-wrap {
+  height: 7%;
+}
+
+.navbar-wrap .navbar {
+  height: 7%;
+}
+
+.content {
+  min-height: 93%;
+}
+
+#fixed-menu {
+  position: fixed;
+}
+
+.navbar {
+  background-color: #595959;
+}
+
+.navbar a.nav-link {
+  color: #f2f2f2;
+}
+
+.content a.nav-link {
+  color: #333;
+}
+
+.content nav {
+  background-color: #f6f9ff;
+  height: 100%;
+}

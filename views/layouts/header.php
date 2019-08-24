@@ -1,170 +1,83 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!doctype html>
+<html lang="ru">
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <title>Интернет-магазин электроники</title>
-  <meta name="description" content="Default Description" />
-  <meta name="keywords" content="Magento, Varien, E-commerce" />
-  <meta name="robots" content="INDEX,FOLLOW" />
-  <link rel="icon" href="#" type="image/x-icon" />
-  <link rel="shortcut icon" href="#" type="image/x-icon" />
-
-  <!-- CSS =====================================================================================-->
-  <link href='http://fonts.googleapis.com/css?family=Telex' rel='stylesheet' type='text/css' />
-
-  <link rel="stylesheet" type="text/css" href="/template/css/styles.css" media="all" />
-  <link rel="stylesheet" type="text/css" href="/template/css/skin.css" media="all" />
-  <link rel="stylesheet" type="text/css" href="/template/css/cloud-zoom.css" media="all" />
-  <link rel="stylesheet" type="text/css" href="/template/css/light_box.css" media="all" />
-  <link rel="stylesheet" type="text/css" href="/template/css/mix.css" media="all" />
-  <link rel="stylesheet" type="text/css" href="/template/css/banner.css" media="all" />
-  <link rel="stylesheet" type="text/css" href="/template/css/magicat.css" media="all" />
-
-  <!-- Scripts =====================================================================================-->
-  <script type="text/javascript" src="/template/js/prototype.js"></script>
-  <script type="text/javascript" src="/template/js/jquery-1.6.1.min.js"></script>
-  <script type="text/javascript" src="/template/js/common.js"></script>
-  <script type="text/javascript" src="/template/js/menu.js"></script>
-  <script type="text/javascript" src="/template/js/banner_pack.js"></script>
-  <script type="text/javascript" src="/template/js/light_box.js"></script>
-  <script type="text/javascript" src="/template/js/cloud-zoom.1.0.2.js"></script>
-  <script type="text/javascript" src="/template/js/jquery.easing.1.3.js"></script>
-  <script type="text/javascript" src="/template/js/jquery.jcarousel.min.js"></script>
-  <script type="text/javascript" src="/template/js/jquery.mix.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Istok+Web&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/template/css/style.css">
+  <title>Магазин</title>
 </head>
 
-<body id="bg_color" class=" cms-index-index cms-home">
-  <!--START OF WRAPPER-->
-  <div class="wrapper">
-    <div class="page">
-
-      <!--START OF HEADER-->
-      <div class="header-container">
-        <div class="quick-access">
-          <!--Start Block Cart-->
-          <div class="block block-cart header_cart">
-            <div class="block-content_pan">
-              <div class="summary trigger-minicart">
-                <h2 class="classy"> <span class="cart_icon"><img alt="" src="/template/images/shoppingbag.png" /></span><a href="/cart"><span id="cart-count"><?php echo $this->total['count']; ?></span> товаров</a> </h2>
+<body>
+  <div id="wrapper">
+    <header class="header">
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm">
+        <a class="navbar-brand" href="/">
+          <span class="brand-name font-weight-bold">YourShop</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">Главная</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/">Новости</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="/" role="button" data-toggle="dropdown">
+                О нас
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="/">Блог</a>
+                <a class="dropdown-item" href="/">Контакты</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="/">История</a>
               </div>
-              <?php if ($this->cartItems): ?>
-                <div class="remain_cart" id="minicart">
-                  <p class="empty">У вас в корзине товары. Вы можете перейти к оформления заказа.</p>
-                  <div class="actions">
-                    <p class="subtotal"> <span class="label">Сумма: </span> <span class="price">$<?php echo $this->total['cost']; ?></span> </p>
-                    <a href="/cart/checkout">
-                      <button type="button" title="Оформить заказ" class="button">
-                        <span><span>Оформить заказ</span></span>
-                      </button>
-                    </a>
-                  </div>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item mr-3">
+              <span class="navbar-text">
+                <i class="fas fa-phone"></i>
+                +7 800 123 45 67
+              </span>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/cart">
+                <i class="fas fa-shopping-basket"></i>
+                <span id="cart-count"><?php echo $this->total['count']; ?></span> товаров
+              </a>
+            </li>
+            <?php if ($this->isRegistered): ?>
+              <li class="userphoto nav-item dropdown pl-3 media d-none d-lg-block">
+                <a class="nav-link dropdown-toggle p-0" href="#" role="button" data-toggle="dropdown">
+                  <img src="/template/images/frontpage/woman2.jpg" class="rounded-circle" alt="photo" height="38px" width="38px">
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                  <a class="dropdown-item" href="/user">Личный кабинет</a>
+                  <a class="dropdown-item" href="/cart">Корзина</a>
+                  <a class="dropdown-item" href="/">Доставка</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="/user/logout">Выйти</a>
                 </div>
-              <?php else: ?>
-                <div class="remain_cart" id="minicart">
-                  <p class="empty">У вас нет товаров в корзине. Вы можете перейти в каталог товаров.</p>
-                  <div class="actions">
-                    <p class="subtotal"> <span class="label">Сумма: </span> <span class="price">$<?php echo $this->total['cost']; ?></span> </p>
-                    <a href="/">
-                      <button type="button" title="Каталог" class="button">
-                        <span><span>Каталог</span></span>
-                      </button>
-                    </a>
-                  </div>
-                </div>
-              <?php endif; ?>
-            </div>
-          </div>
-          <!--End Block Cart-->
-
-          <!--Start Toplinks-->
-          <ul class="links">
-            <!-- <li><a href="#" title="Заказ" class="top-link-checkout">Заказ</a></li> -->
-            <?php if($this->isRegistered): ?>
-              <li class="first"><a href="/user" title="<?php echo $this->userInfo['name']; ?>"><?php echo $this->userInfo['name']; ?></a></li>
-              <li class=" last"><a href="/user/logout" title="Войти">Выйти</a></li>
+              </li>
             <?php else: ?>
-              <!-- <li class="first"><a href="/user" title="Мой аккаунт">Мой аккаунт</a></li> -->
-              <li><a href="/user/register" title="Регистрация" class="top-link-checkout">Регистрация</a></li>
-              <li class=" last"><a href="/user/login" title="Войти">Войти</a></li>
+              <li class="nav-item">
+                <a class="nav-link" href="/user/login">
+                  <i class="fas fa-sign-in-alt"></i>
+                  Войти
+                </a>
+              </li>
             <?php endif; ?>
           </ul>
-          <!--End Toplinks-->
-
-          <!--Start Language-->
-          <div class="form-language">
-            <div class="language" id="select-language">
-              <a title="English" class="flag" href="#" style="background: url(/template/images/flag_default.gif) no-repeat scroll 0% 0% transparent;">
-                English
-              </a>
-              <a title="French" class="flag" href="#" style="background: url(/template/images/flag_french.gif) no-repeat scroll 0% 0% transparent;">
-                French
-              </a>
-              <a title="German" class="flag" href="#" style="background: url(/template/images/flag_german.gif) no-repeat scroll 0% 0% transparent;">
-                German
-              </a>
-            </div>
-          </div>
-          <!--End Language-->
-
-          <!--Start Currency-->
-          <div class="header_currency">
-            <div class="block block-currency">
-              <div class="block-content"> <a title="British Pound Sterling" class="currency_icon" style="background: url(/template/images/currency_GBP.gif) no-repeat" href="#">British Pound</a> <a title="Euro" class="currency_icon"
-                  style="background:url(/template/images/currency_EUR.gif) no-repeat" href="#">Euro</a> <a title="US Dollar" class="currency_icon selected" style="background: url(/template/images/currency_USD.gif) no-repeat" href="#">US Dollar</a>
-              </div>
-            </div>
-          </div>
-          <!--End Currency-->
         </div>
-
-        <!--Start Header Content-->
-        <div class="header">
-          <ul id="logo">
-            <!--Left-->
-            <li class="head-container"> <span>{</span>
-              <h2 class="classy">Бесплатная доставка при заказе на сумму более $9.99</h2>
-              <span>}</span>
-              <p class="top-welcome-msg">Добро пожаловать!</p>
-            </li>
-            <!--Left-->
-            <!--Center Logo-->
-            <li class="logo-box">
-              <h1 class="logo"><strong>Santana Commerce</strong>
-                <a href="/" title="Santana Commerce" class="logo">
-                  <img src="/template/images/logo.png" alt="Santana Commerce" />
-                </a>
-              </h1>
-            </li>
-            <!--Center Logo-->
-
-            <!--Right-->
-            <li class="head-container"> <span>{</span>
-              <h2 class="classy">Телефон - +7 800 123 45 67</h2>
-              <span>}</span>
-              <div id="search-bar">
-                <div class="top-bar">
-                  <form id="search_mini_form" action="">
-                    <div class="form-search">
-                      <input onfocus="if(this.value=='Search') {this.value=''};" onblur="if(this.value=='') {this.value='Search'};" id="search" name="q" value="Search" class="input-text" type="text" />
-                      <button type="submit" title="Go" class="button">Go</button>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </li>
-            <!--Right-->
-          </ul>
-          <!--Start of Navigation-->
-          <div class="nav-container">
-            <ul id="nav">
-              <?php foreach ($this->listOfCategories as $key => $category): ?>
-                <li><a href="/category/<?php echo $category['id']; ?>"><?php echo $category['name'] ?></a></li>
-              <?php endforeach; ?>
-            </ul>
-          </div>
-          <!--End of Navigation-->
-        </div>
-        <!--End Header Content-->
-      </div>
-      <!--END OF HEADER-->
+      </nav>
+    </header>
