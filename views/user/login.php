@@ -13,6 +13,11 @@
   <title>Вход</title>
 </head>
 
+<?php if (isset($errors) && is_array($errors)): ?>
+  <?php foreach ($errors as $error): ?>
+    <div class="alert alert-danger" role="alert"><?php echo $error; ?></div>
+  <?php endforeach; ?>
+<?php endif; ?>
 <body class="text-center">
   <div class="container login-form">
     <div class="row justify-content-center pt-xl-5">

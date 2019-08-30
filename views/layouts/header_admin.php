@@ -1,55 +1,32 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-
+<!doctype html>
+<html lang="ru">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <title>Панель администратора</title>
-  <meta name="description" content="Default Description" />
-  <meta name="keywords" content="Magento, Varien, E-commerce" />
-  <meta name="robots" content="INDEX,FOLLOW" />
-  <link rel="icon" href="#" type="image/x-icon" />
-  <link rel="shortcut icon" href="#" type="image/x-icon" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <!-- CSS =====================================================================================-->
-  <link href='http://fonts.googleapis.com/css?family=Telex' rel='stylesheet' type='text/css' />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Istok+Web&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" type="text/css" href="/template/css/styles.css" media="all" />
-  <link rel="stylesheet" type="text/css" href="/template/css/skin.css" media="all" />
-  <link rel="stylesheet" type="text/css" href="/template/css/cloud-zoom.css" media="all" />
-  <link rel="stylesheet" type="text/css" href="/template/css/light_box.css" media="all" />
-  <link rel="stylesheet" type="text/css" href="/template/css/mix.css" media="all" />
-  <link rel="stylesheet" type="text/css" href="/template/css/banner.css" media="all" />
-  <link rel="stylesheet" type="text/css" href="/template/css/magicat.css" media="all" />
-
-  <!-- Scripts =====================================================================================-->
-  <script type="text/javascript" src="/template/js/prototype.js"></script>
-  <script type="text/javascript" src="/template/js/jquery-1.6.1.min.js"></script>
-  <script type="text/javascript" src="/template/js/common.js"></script>
-  <script type="text/javascript" src="/template/js/menu.js"></script>
-  <script type="text/javascript" src="/template/js/banner_pack.js"></script>
-  <script type="text/javascript" src="/template/js/light_box.js"></script>
-  <script type="text/javascript" src="/template/js/cloud-zoom.1.0.2.js"></script>
-  <script type="text/javascript" src="/template/js/jquery.easing.1.3.js"></script>
-  <script type="text/javascript" src="/template/js/jquery.jcarousel.min.js"></script>
-  <script type="text/javascript" src="/template/js/jquery.mix.js"></script>
+  <link rel="stylesheet" href="/template/css/admin_style.css">
+  <title>Админпанель</title>
 </head>
 
-<body id="bg_color" class=" cms-index-index cms-home">
-  <!--START OF WRAPPER-->
-  <div class="wrapper">
-    <div class="page">
-
-      <!--START OF HEADER-->
-      <div class="header-container">
-        <div class="quick-access">
-
-        <!--Start Toplinks-->
-        <ul class="links">
-            <li><a href="/admin" title="Админпанель" class="top-link-checkout">Админпанель</a></li>
-            <li class=" last"><a href="/" title="На сайт">На сайт</a></li>
+<body>
+  <div class="navbar-wrap">
+    <nav class="navbar navbar-expand shadow fixed-top">
+      <div class="navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="/admin"> <i class="fas fa-cogs"></i> Админпанель</a>
+          </li>
         </ul>
-        <!--End Toplinks-->
-
-        </div>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/"> <i class="fas fa-sign-out-alt"></i> На сайт</a>
+          </li>
+        </ul>
       </div>
-      <!--END OF HEADER-->
+    </nav>
+  </div>

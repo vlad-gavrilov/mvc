@@ -1,11 +1,16 @@
 <?php require_once(ROOT . '/views/layouts/header_admin.php') ?>
 
-<section>
-  <h4>Удалить товар #<?php echo $productId; ?></h4>
-  <p>Вы действительно хотите удалить этот товар?</p>
-  <form method="post">
-      <input type="submit" name="submit" value="Удалить" />
-  </form>
-</section>
+<div class="content container-fluid">
+  <div class="col pt-3">
+    <div class="h5 mb-4 text-center">Удалить товар #<?php echo $productId; ?></div>
+    <hr>
+    <p class="text-center">Вы действительно хотите удалить этот товар?</p>
+    <form method="post">
+      <div class="row">
+        <div class="col-12"><button type="submit" name="submit" class="btn btn-danger btn-block">Удалить</button></div>
+      </div>
+    </form>
+  </div>
+</div>
 
 <?php require_once(ROOT . '/views/layouts/footer_admin.php') ?>

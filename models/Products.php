@@ -77,7 +77,7 @@ class Products
     // Соединение с БД
     $db = Db::getConnection();
     // Все товары из списка
-    $result = $db->query('SELECT id, name, category_id, code, price, availability FROM product ORDER BY id ASC');
+    $result = $db->query('SELECT id, name, category_id, code, price, availability, brand, is_new, is_recommended, status FROM product ORDER BY id ASC');
     $products = array();
     $i = 0;
     while ($row = $result->fetch()) {
@@ -87,6 +87,10 @@ class Products
         $products[$i]['code'] = $row['code'];
         $products[$i]['price'] = $row['price'];
         $products[$i]['availability'] = $row['availability'];
+        $products[$i]['brand'] = $row['brand'];
+        $products[$i]['is_new'] = $row['is_new'];
+        $products[$i]['is_recommended'] = $row['is_recommended'];
+        $products[$i]['status'] = $row['status'];
         ++$i;
     }
     return $products;
