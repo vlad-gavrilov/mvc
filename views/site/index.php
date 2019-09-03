@@ -10,8 +10,8 @@
     <div class="col-12 col-sm-6 col-lg-3">
       <a class="nav-item nav-link" href="/category/<?php echo $category['id']; ?>">
         <div class="text-left text-lg-center">
-          <i class="fas fa-laptop"></i>
-          <?php echo $category['name'] ?>
+          <?php echo htmlspecialchars_decode($category['logo']); ?>
+          <?php echo $category['name']; ?>
         </div>
       </a>
     </div>

@@ -8,7 +8,7 @@
   <?php endif; ?>
   <div class="col pt-3">
     <form class="" action="#" method="post" enctype="multipart/form-data">
-      <div class="h5 mb-4 font-weight-normal">Создание нового товара</div>
+      <div class="h5 mb-4 font-weight-normal">Редактирование товара</div>
       <div class="form-row">
         <div class="form-group col-lg-12">
           <label for="name">Название товара</label>

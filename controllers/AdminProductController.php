@@ -62,7 +62,7 @@ class AdminProductController extends AdminBase
             move_uploaded_file($_FILES['image']['tmp_name'], $_SERVER['DOCUMENT_ROOT'] . "/upload/images/products/{$id}.jpg");
           }
         }
-        // Редирект страницу управлениями товарами
+        // Редирект на страницу управлениями товарами
         header('Location: /admin/product');
       }
     }
@@ -107,7 +107,7 @@ class AdminProductController extends AdminBase
           move_uploaded_file($_FILES['image']['tmp_name'], $_SERVER['DOCUMENT_ROOT'] . "/upload/images/products/{$productId}.jpg");
         }
       }
-      // Редирект страницу управлениями товарами
+      // Редирект на страницу управлениями товарами
       header('Location: /admin/product');
 
     }
@@ -118,7 +118,7 @@ class AdminProductController extends AdminBase
   /**
    * Action для страницы удаления товара
    *
-   * @param $productId Идентификатор редактируемого товара
+   * @param $productId Идентификатор удаляемого товара
    * @return true
    */
   public function actionDelete($productId) {
@@ -126,7 +126,7 @@ class AdminProductController extends AdminBase
     if (isset($_POST['submit'])) {
       // Удаляем товар из БД
       Products::deleteProduct($productId);
-      // Редирект страницу управлениями товарами
+      // Редирект на страницу управлениями товарами
       header('Location: /admin/product');
     }
     include(ROOT . '/views/admin/product/delete.php');
