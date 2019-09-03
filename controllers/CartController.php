@@ -52,10 +52,8 @@ class CartController extends Controller
   public function actionDelete($id) {
     // Если пользователь авторизован, то вызываем метод класса CartAuthorized, иначе - класса CartUnauthorized
     ($this->isRegistered) ? CartAuthorized::deleteItemFromCart($id) : CartUnauthorized::deleteItemFromCart($id);
-    // Получаем ссылку на страницу с которой произошел переход
-    $referrer = $_SERVER['HTTP_REFERER'];
-    // Перенаправляем пользователя на эту страницу
-    header("Location: $referrer");
+    // Перенаправляем пользователя на страницу с корзиной
+    header("Location: /cart");
   }
 
   /**

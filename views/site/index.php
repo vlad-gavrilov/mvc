@@ -78,29 +78,27 @@
   <hr>
   <div class="container pb-3">
     <?php for ($i = 0; $i < 6; $i++): ?>
-      <?php if ($i % 3 == 0): ?>
+      <?php if (!($i % 3)): ?>
         <div class="row pb-3">
       <?php endif; ?>
-
       <div class="col-md-4 mb-1">
         <div class="card">
-          <img src="/upload/images/products/<?php echo $latestList[$i]['id']; ?>.jpg" alt="" class="card-img-top p-3" height="250">
+          <img src="/upload/images/products/<?php echo $recommendedList[$i]['id']; ?>.jpg" alt="" class="card-img-top p-3" height="250">
           <div class="card-body">
-            <!-- <h4 class="card-title"><?php echo $latestList[$i]['name']; ?></h4> -->
-            <p class="card-text font-weight-bold"><?php echo $latestList[$i]['name']; ?></p>
+            <!-- <h4 class="card-title"><?php echo $recommendedList[$i]['name']; ?></h4> -->
+            <p class="card-text font-weight-bold"><?php echo $recommendedList[$i]['name']; ?></p>
             <span class="font-weight-bold">
-              <h2>$<?php echo $latestList[$i]['price']; ?></h2>
+              <h2>$<?php echo $recommendedList[$i]['price']; ?></h2>
             </span>
             <hr class="w-100">
             <div class="d-flex flex-column flex-xl-row justify-content-between">
-              <a href="/product/<?php echo $latestList[$i]['id']; ?>" class="btn btn-secondary mb-1 mb-xl-0"><i class="fas fa-eye"></i> Посмотреть</a>
-              <a href="/cart/add/<?php echo $latestList[$i]['id']; ?>" class="btn btn-success"><i class="fas fa-shopping-basket"></i> В корзину</a>
+              <a href="/product/<?php echo $recommendedList[$i]['id']; ?>" class="btn btn-secondary mb-1 mb-xl-0"><i class="fas fa-eye"></i> Посмотреть</a>
+              <a href="/cart/add/<?php echo $recommendedList[$i]['id']; ?>" class="btn btn-success"><i class="fas fa-shopping-basket"></i> В корзину</a>
             </div>
           </div>
         </div>
       </div>
-
-      <?php if (($i + 1) % 3 == 0): ?>
+      <?php if (!(($i + 1) % 3)): ?>
         </div>
       <?php endif; ?>
     <?php endfor; ?>

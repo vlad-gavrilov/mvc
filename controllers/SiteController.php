@@ -12,7 +12,7 @@ class SiteController extends Controller
    */
   public function actionIndex() {
     // Получаем 15 последних товаров
-    $latestList = Products::getLatestProducts();
+    $recommendedList = Products::getRecommendedProducts();
 
     include(ROOT . '/views/site/index.php');
     return true;

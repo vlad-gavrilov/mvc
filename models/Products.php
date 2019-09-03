@@ -69,6 +69,28 @@ class Products
   }
 
   /**
+   * Получение списка рекомендованных товаров
+   *
+   * @return mixed|false
+   */
+  public static function getRecommendedProducts() {
+    // Соединение с БД
+    $db = Db::getConnection();
+    // Последние 15 товаров со статусом 1
+    $sql = 'SELECT * FROM product WHERE is_recommended = 1 AND status = 1 ORDER BY id DESC LIMIT 6';
+    // Выполнение запроса
+    $result = $db->query($sql);
+    $i = 0;
+    $recommendedList = array();
+    // Считываем результаты в массив
+    while($row = $result->fetch()) {
+      $recommendedList[$i] = $row;
+      ++$i;
+    }
+    return $recommendedList;
+  }
+
+  /**
    * Получение списка товаров
    *
    * @return array
