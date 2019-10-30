@@ -15,7 +15,7 @@ class Products
     // Соединение с БД
     $db = Db::getConnection();
     // Список товаров с заданным id
-    $sql = 'SELECT * FROM product WHERE category_id = :categoryId';
+    $sql = 'SELECT * FROM product WHERE category_id = :categoryId AND status = 1';
     $result = $db->prepare($sql);
     $result->bindParam(':categoryId', $categoryId, PDO::PARAM_INT);
     $result->execute();

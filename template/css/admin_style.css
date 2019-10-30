@@ -40,3 +40,7 @@ body {
   background-color: #f6f9ff;
   height: 100%;
 }
+
+a:hover {
+  text-decoration: none;
+}
