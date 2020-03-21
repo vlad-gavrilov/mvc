@@ -17,7 +17,7 @@ abstract class AdminBase
     if ($id) {
       // Получаем информацию о пользователе
       // Если пользователь администратор
-      if (User::getUserInfoById($id)['role'] == 'admin') {
+      if (User::getUserInfoById($id)['role'] === 'admin') {
         return true;
       }
       // Если у пользователя нет прав доступа, то завершаем выполнение программы

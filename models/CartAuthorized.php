@@ -99,7 +99,7 @@ class CartAuthorized
     $countInCart = $result->fetch()['count'];
 
     // Если товара нет в корзине
-    if ($countInCart == 0) {
+    if (!$countInCart) {
       // Вставляем строку с id товара в таблицу
       $sql = 'INSERT INTO cart (id_user, id_product, count) VALUES (:id_user, :id_product, :count)';
       $result = $db->prepare($sql);

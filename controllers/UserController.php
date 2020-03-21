@@ -14,9 +14,7 @@ class UserController extends Controller
     // Получаем id пользователя
     $id = User::isLogged();
     // Если пользователь не авторизован, то редирект на страницу входа
-    if (!$id) {
-      header('Location: /user/login');
-    }
+    if (!$id) header('Location: /user/login');
     // Получаем данные о пользователе
     $userData = User::getUserInfoById($id);
     require_once(ROOT . '/views/user/index.php');
@@ -29,6 +27,9 @@ class UserController extends Controller
    * @return boolean true
    */
   public function actionRegister () {
+    // Если пользователь уже вошел в систему, то редирект на главную страницу
+    if (User::isLogged()) header('Location: /');
+
     $result = false;
     $userData['name'] = '';
     $userData['email'] = '';
@@ -61,6 +62,9 @@ class UserController extends Controller
    */
   public function actionLogin()
   {
+    // Если пользователь уже вошел в систему, то редирект на главную страницу
+    if (User::isLogged()) header('Location: /');
+
     $result = false;
     $userData['email'] = '';
     $userData['password'] = '';
@@ -102,7 +106,6 @@ class UserController extends Controller
    */
   public function actionLogout() {
     User::logout();
-    header('Location: /');
   }
 
   /**
@@ -114,9 +117,7 @@ class UserController extends Controller
     // Получаем id пользователя
     $id = User::isLogged();
     // Если пользователь не авторизован, то редирект на страницу входа
-    if (!$id) {
-      header('Location: /user/login');
-    }
+    if (!$id) header('Location: /user/login');
     // Получаем данные о пользователе
     $userData = User::getUserInfoById($id);
 

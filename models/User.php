@@ -212,7 +212,7 @@ class User
    * @return void
    */
   public static function logout() {
-    unset($_SESSION["user"]);
+    unset($_SESSION['user']);
   }
 
   /**

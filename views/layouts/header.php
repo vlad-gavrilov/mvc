@@ -69,6 +69,9 @@
                   <a class="dropdown-item" href="/user/logout">Выйти</a>
                 </div>
               </li>
+              <li class="nav-item d-lg-none">
+                <a class="nav-link" href="/user/logout">Выйти</a>
+              </li>
             <?php else: ?>
               <li class="nav-item">
                 <a class="nav-link" href="/user/login">
