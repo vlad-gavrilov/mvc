@@ -75,7 +75,7 @@ class AdminCategoryController extends AdminBase
       $options['name'] = $_POST['name'];
       $options['sort_order'] = $_POST['sort_order'];
       $options['status'] = $_POST['status'];
-      $options['logo'] = htmlspecialchars($_POST['logo']);
+      $options['logo'] = $_POST['logo'];
       // Добавляем в массив опций id категории
       $options['id'] = $categoryId;
       // Массив ошибок
@@ -87,10 +87,6 @@ class AdminCategoryController extends AdminBase
       // Если введенный порядок сортировки не число
       if (!ctype_digit($options['sort_order'])) {
         $errors[] = 'Порядок сортировки должен быть целым неотрицательным числом';
-      }
-      // Сравниваем длину необработанной строки
-      if (mb_strlen($_POST['logo'], 'UTF-8') > 40) {
-        $errors[] = 'Длина наименования логотипа должна быть не более 40 символов';
       }
       // Если ошибок нет
       if ($errors == false) {

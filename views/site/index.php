@@ -6,16 +6,16 @@
     </a>
   </p>
   <nav class="categories row nav nav-pills nav-justified border-top border-bottom mb-3">
-  <?php foreach ($this->listOfCategories as $key => $category): ?>
+  <?php for ($i = 0; $i < 4; $i++){ ?>
     <div class="col-12 col-sm-6 col-lg-3">
-      <a class="nav-item nav-link" href="/category/<?php echo $category['id']; ?>">
+      <a class="nav-item nav-link" href="/category/<?php echo $this->listOfCategories[$i]['id']; ?>">
         <div class="text-left text-lg-center">
-          <?php echo htmlspecialchars_decode($category['logo']); ?>
-          <?php echo $category['name']; ?>
+          <i class="<?php echo $this->listOfCategories[$i]['logo']; ?>"></i>
+          <?php echo $this->listOfCategories[$i]['name']; ?>
         </div>
       </a>
     </div>
-  <?php endforeach; ?>
+  <?php } ?>
   </nav>
   <div class="container-fluid p-0">
     <div class="row">

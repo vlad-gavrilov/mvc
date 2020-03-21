@@ -31,7 +31,15 @@
       <div class="form-row">
         <div class="form-group col-lg-12">
           <label for="logo">Логотип категории</label>
-          <input type="text" class="form-control" id="logo" name="logo" value="<?php echo $categoryInfo['logo']; ?>">
+          <select id="logo" class="form-control" name="logo">
+            <option value="fas fa-laptop" <?php if($categoryInfo['logo'] == "fas fa-laptop") echo "selected"; ?>>laptop</option>
+            <option value="fas fa-tablet-alt" <?php if($categoryInfo['logo'] == "fas fa-tablet-alt") echo "selected"; ?>>tablet</option>
+            <option value="far fa-keyboard" <?php if($categoryInfo['logo'] == "far fa-keyboard") echo "selected"; ?>>keyboard</option>
+            <option value="fas fa-headphones" <?php if($categoryInfo['logo'] == "fas fa-headphones") echo "selected"; ?>>headphones</option>
+            <option value="fas fa-shopping-basket" <?php if($categoryInfo['logo'] == "fas fa-shopping-basket") echo "selected"; ?>>shopping-basket</option>
+            <option value="far fa-hdd" <?php if($categoryInfo['logo'] == "far fa-hdd") echo "selected"; ?>>hdd</option>
+            <option value="fas fa-tv" <?php if($categoryInfo['logo'] == "fas fa-tv") echo "selected"; ?>>tv</option>
+          </select>
         </div>
       </div>
       <div class="row">

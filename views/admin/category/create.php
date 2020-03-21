@@ -31,7 +31,15 @@
       <div class="form-row">
         <div class="form-group col-lg-12">
           <label for="logo">Логотип категории</label>
-          <input type="text" class="form-control" id="logo" name="logo">
+          <select id="logo" class="form-control" name="logo">
+            <option value="fas fa-laptop">laptop</option>
+            <option value="fas fa-tablet-alt">tablet</option>
+            <option value="far fa-keyboard">keyboard</option>
+            <option value="fas fa-headphones">headphones</option>
+            <option value="fas fa-shopping-basket">shopping-basket</option>
+            <option value="far fa-hdd">hdd</option>
+            <option value="fas fa-tv">tv</option>
+          </select>
         </div>
       </div>
       <div class="row">
