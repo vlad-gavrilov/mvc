@@ -53,7 +53,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/cart">
                 <i class="fas fa-shopping-basket"></i>
-                <span id="cart-count"><?php echo $this->total['count']; ?></span> товаров
+                Корзина ( <span id="cart-count"><?php echo $this->total['count']; ?></span> )
               </a>
             </li>
             <?php if ($this->isRegistered): ?>

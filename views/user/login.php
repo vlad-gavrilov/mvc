@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8">
@@ -13,12 +13,12 @@
   <title>Вход</title>
 </head>
 
-<?php if (isset($errors) && is_array($errors)): ?>
-  <?php foreach ($errors as $error): ?>
-    <div class="alert alert-danger" role="alert"><?php echo $error; ?></div>
-  <?php endforeach; ?>
-<?php endif; ?>
 <body class="text-center">
+  <?php if (isset($errors) && is_array($errors)): ?>
+    <?php foreach ($errors as $error): ?>
+      <div class="alert alert-danger" role="alert"><?php echo $error; ?></div>
+    <?php endforeach; ?>
+  <?php endif; ?>
   <div class="container login-form">
     <div class="row justify-content-center pt-xl-5">
       <div class="col-12 col-lg-6 col-xl-4">

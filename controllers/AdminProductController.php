@@ -42,13 +42,21 @@ class AdminProductController extends AdminBase
       $options['status'] = $_POST['status'];
       // Массив ошибок
       $errors = false;
-      // Если имя не введено
-      if (!isset($options['name']) || empty($options['name'])) {
+      // Если название не введено
+      if (Products::isEmptyString($options['name'])) {
         $errors[] = 'Заполните имя';
       }
-      // Если цена не введена
-      if (!isset($options['price']) || empty($options['price'])) {
-        $errors[] = 'Укажите цену';
+      // Если цена введена некорректно или вовсе не введена
+      if (Products::incorrectPrice($options['price'])) {
+        $errors[] = 'Неверно указана цена';
+      }
+      // Если производитель не введен
+      if (Products::isEmptyString($options['brand'])) {
+        $errors[] = 'Введите производителя';
+      }
+      // Если артикул введен некорректно или вовсе не введен
+      if (Products::incorrectCode($options['code'])) {
+        $errors[] = 'Неверно указан артикул';
       }
       // Если ошибок нет
       if ($errors == false) {
@@ -98,18 +106,37 @@ class AdminProductController extends AdminBase
       $options['status'] = $_POST['status'];
       // Добавляем в массив опций id товара
       $options['id'] = $productId;
-
-      // Редактируем товар в БД
-      if (Products::updateProduct($options)) {
-        // Если было загружено фото
-        if (is_uploaded_file($_FILES['image']['tmp_name'])) {
-          // Переместим его в соответствующую папку и дадим имя
-          move_uploaded_file($_FILES['image']['tmp_name'], $_SERVER['DOCUMENT_ROOT'] . "/upload/images/products/{$productId}.jpg");
-        }
+      // Массив ошибок
+      $errors = false;
+      // Если название не введено
+      if (Products::isEmptyString($options['name'])) {
+        $errors[] = 'Заполните имя';
       }
-      // Редирект на страницу управлениями товарами
-      header('Location: /admin/product');
-
+      // Если цена введена некорректно или вовсе не введена
+      if (Products::incorrectPrice($options['price'])) {
+        $errors[] = 'Неверно указана цена';
+      }
+      // Если производитель не введен
+      if (Products::isEmptyString($options['brand'])) {
+        $errors[] = 'Введите производителя';
+      }
+      // Если артикул введен некорректно или вовсе не введен
+      if (Products::incorrectCode($options['code'])) {
+        $errors[] = 'Неверно указан артикул';
+      }
+      // Если ошибок нет
+      if ($errors == false) {
+        // Редактируем товар в БД
+        if (Products::updateProduct($options)) {
+          // Если было загружено фото
+          if (is_uploaded_file($_FILES['image']['tmp_name'])) {
+            // Переместим его в соответствующую папку и дадим имя
+            move_uploaded_file($_FILES['image']['tmp_name'], $_SERVER['DOCUMENT_ROOT'] . "/upload/images/products/{$productId}.jpg");
+          }
+        }
+        // Редирект на страницу управлениями товарами
+        header('Location: /admin/product');
+      }
     }
     include(ROOT . '/views/admin/product/update.php');
     return true;

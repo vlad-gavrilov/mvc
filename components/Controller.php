@@ -19,6 +19,7 @@ class Controller
    * @var integer|null
    */
   protected $isRegistered;
+
   /**
    * Информация о пользователе
    *
@@ -32,6 +33,7 @@ class Controller
    * @var array
    */
   protected $cartItems;
+
   /**
    * Суммарная стоимость товаров в корзине
    *

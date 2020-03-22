@@ -21,9 +21,10 @@ abstract class AdminBase
         return true;
       }
       // Если у пользователя нет прав доступа, то завершаем выполнение программы
-      die('У вас нет доступа!');
+      require_once(ROOT . '/views/admin/access_error.php');
+      die();
     }
     // Если пользователь не зарегистрирован, то перенаправляем его на страницу входа
-    header("Location: /user/login");
+    header('Location: /user/login');
   }
 }

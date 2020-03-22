@@ -207,4 +207,43 @@ class Products
     $result->bindParam(':id', $id, PDO::PARAM_INT);
     return $result->execute();
   }
+
+  /**
+   * Обнаружение неинициализированной или пустой строки
+   *
+   * @param string $string Входная строка
+   * @return true|void
+   */
+  public static function isEmptyString($string) {
+    // Если строка пустая
+    if (!isset($string) || empty($string)) {
+        return true;
+    }
+  }
+
+  /**
+   * Обнаружение наличия ошибок в введенной цене
+   *
+   * @param string $price Цена товара
+   * @return true|void
+   */
+  public static function incorrectPrice($price) {
+    // Если цена пустое значение или не число или отрицательная величина
+    if (!isset($price) || (!ctype_digit($price)) || ($price < 0)) {
+        return true;
+    }
+  }
+
+  /**
+   * Обнаружение наличия ошибок в введенном артикуле
+   *
+   * @param string $price Артикул товара
+   * @return true|void
+   */
+  public static function incorrectCode($code) {
+    // Если артикул пустое значение или не число
+    if (!isset($code) || empty($code) || (!ctype_digit($code))) {
+        return true;
+    }
+  }
 }

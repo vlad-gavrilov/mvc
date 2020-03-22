@@ -27,8 +27,11 @@ class CartController extends Controller
    */
   public function actionAdd($id) {
     ($this->isRegistered) ? CartAuthorized::addIntoCart($id) : CartUnauthorized::addIntoCart($id);
-    $referrer = $_SERVER['HTTP_REFERER']; //TODO доделать в случае, если $_SERVER['HTTP_REFERER'] == null
-    header("Location: $referrer");
+    $referrer = $_SERVER['HTTP_REFERER'];
+    if ($referrer)
+      header("Location: $referrer");
+    else
+      header('Location: /cart');
   }
 
   /**
@@ -53,7 +56,7 @@ class CartController extends Controller
     // Если пользователь авторизован, то вызываем метод класса CartAuthorized, иначе - класса CartUnauthorized
     ($this->isRegistered) ? CartAuthorized::deleteItemFromCart($id) : CartUnauthorized::deleteItemFromCart($id);
     // Перенаправляем пользователя на страницу с корзиной
-    header("Location: /cart");
+    header('Location: /cart');
   }
 
   /**
